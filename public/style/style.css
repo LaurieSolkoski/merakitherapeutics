@@ -14,19 +14,31 @@ header {
     text-align: center;
 }
 
+
+.nav-text {
+    position:relative;
+    text-align: center;
+    color: white !important;
+    font-size: 1rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
 nav {
-    position: fixed;
+    position:relative;
     top: 0;
     left: 0;
-    width: 250px; /* Adjust this width as per your needs */
-    height: 100vh; /* Full height */
+    width: 320px; 
+    height: 110vh; 
     background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    z-index: 1000; /* Higher than the fullscreen GIF */
+
     backdrop-filter: blur(10px); /* Frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* Frosted glass for Safari */
     border-right: 1px solid rgba(255, 255, 255, 0.311); /* Light border for effect */
     /* padding-top: 50px; */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    z-index: 1000;
+    z-index: 1;
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center;
@@ -42,7 +54,7 @@ nav ul {
 nav ul li {
     /* width: 100%;*/
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 nav ul li a {
@@ -51,7 +63,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     /* padding: 5px; */
-    padding: 10px 20px;
+    padding: 5px 10px;
     transition: all 0.3s ease-in-out;
     /* width: 100%; */
     border-radius: 50px; 
@@ -66,7 +78,7 @@ nav ul li a:hover {
 }
 
 nav .logo img {
-    width: 250px;
+    width: 320px;
     height: 150px;
     margin-bottom: 15px;
 }
@@ -104,9 +116,14 @@ h1, h2 {
 .fullscreen-gif {
     position: relative;
     width: 100%;
-    height: 100vh; /* Fullscreen height */
+    height: 110vh; /* Fullscreen height */
     background: url('/images/optimized.gif') no-repeat center center/cover; /* Path to your GIF */
+    display: flex;
+    justify-content: flex-start; /* Align items on the left */
+    align-items: center; /* Vertically center */
+    
 }
+
 
 /* Base styles for the overlay text */
 .overlay-text {
