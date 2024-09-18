@@ -15,7 +15,7 @@
         "dest": "/public/style/$1"
       },
       {
-        "src": "/public/images/(.*)",
+        "src": "/images/(.*)",
         "dest": "/public/images/$1"
       }
     ]
