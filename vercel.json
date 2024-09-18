@@ -15,8 +15,8 @@
         "dest": "/public/style/$1"
       },
       {
-        "src": "/images/(.*)",
-        "dest": "/public/images/lavender_fields.gif"
+        "src": "/public/images/(.*)",
+        "dest": "/public/images/$1"
       }
     ]
   }
