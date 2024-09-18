@@ -18,7 +18,10 @@ nav {
     left: 0;
     width: 250px; /* Adjust this width as per your needs */
     height: 100vh; /* Full height */
-    background-color: white; 
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass for Safari */
+    border-right: 1px solid rgba(255, 255, 255, 0.311); /* Light border for effect */
     padding-top: 50px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
     z-index: 1000;
@@ -59,7 +62,7 @@ nav ul li a:hover {
 }
 
 nav .logo img {
-    width: 200px;
+    width: 250px;
     margin-bottom: 30px;
 }
 
