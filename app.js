@@ -50,7 +50,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Zenergy Tahoe' });
+    res.render('index', { title: 'Meraki Therapeutics' });
 });
 
 app.get('/services', (req, res) => {
