@@ -9,6 +9,14 @@
       {
         "src": "/(.*)",
         "dest": "app.js"
+      },
+      {
+        "src": "/style/(.*)",
+        "dest": "/public/style/$1"
+      },
+      {
+        "src": "/images/(.*)",
+        "dest": "/public/images/$1"
       }
     ]
   }
