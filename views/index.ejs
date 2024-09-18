@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style/style.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
@@ -13,13 +14,13 @@
         <div class="fullscreen-gif">
         <nav>
             <div class="logo">
-                <img src="/images/logo.png" alt="Meraki Therapeutics Logo">
+                <a href="/"> <img src="/images/logo.png" alt="Meraki Therapeutics Logo"> </a>
             </div>
             <!-- <div class="hamburger" id="hamburger">&#9776;</div> Hamburger icon -->
             <!-- <div class="close" id="close">&times;</div> Close icon -->
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/why_meraki">Why Meraki</a></li>
+                <li>
+                    <a href="/why_meraki">Why Meraki</a></li>
                 <li><a href="/team">Our Team</a></li>
                 <li><a href="/services">Treatments</a></li>
 
@@ -54,39 +55,30 @@
 
     </header>
 
+
+
     <main>
-        <!-- <div class="fullscreen-gif">
-            <div class="overlay-text">
-                <p>Massage Professionals at Tsawwassen Commons.</p>
-                <h1>Where your wellness matters.</h1>
-
-            </div>
-        </div> -->
-
-        <!-- New Block Section below the GIF -->
-        <section class="additional-block">
-            <h2>Our Services</h2>
-            <p>At Meraki Therapeutics, we offer a wide range of therapeutic and wellness treatments designed to rejuvenate your body and mind.</p>
+        <!-- Meraki Section -->
+        <section class="meraki-block">
+            <h1>Meraki [may-rah-kee]</h1>
+            <p>Doing something with soul, creativity or love. Meraki is about putting something of yourself into what you are doing.</p>
         </section>
-        
+
+         <!-- Soma Block -->
+
+    <section class="soma-block">
+        <div class = "soma-image"></div>
+
+        <div class="soma-content">
+            <h2>Soma - Non RMT</h2>
+            <p>Connect with our certified massage professional for a full body table massage, for your alternative treatment and prevention, or for a much needed break from tension and stress.</p>
+            <a href="#learn-more" class="btn-learn-more">Learn More</a>
+        </div>
+    </section>
+
+    
     </main>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const closeIcon = document.getElementById('close');
-        const navMenu = document.getElementById('nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.add('show');
-            hamburger.style.display = 'none';
-            closeIcon.style.display = 'block';
-        });
-
-        closeIcon.addEventListener('click', () => {
-            navMenu.classList.remove('show');
-            closeIcon.style.display = 'none';
-            hamburger.style.display = 'block';
-        });
-    </script>
+    
 </body>
 </html>
