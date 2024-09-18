@@ -1,14 +1,16 @@
-body {
+body, html {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: rgba(255, 255, 255, 0.691) !important;
+    overflow-y: auto;
+    height: 100%;
 }
 
 header {
     background-color: rgba(255, 255, 255, 0.691) !important;
     color: #e6e6faa4 !important;
-    padding: 15px 0;
+    /* padding: 15px 0; */
     text-align: center;
 }
 
@@ -22,7 +24,7 @@ nav {
     backdrop-filter: blur(10px); /* Frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* Frosted glass for Safari */
     border-right: 1px solid rgba(255, 255, 255, 0.311); /* Light border for effect */
-    padding-top: 50px;
+    /* padding-top: 50px; */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
     z-index: 1000;
     display: flex;
@@ -38,19 +40,21 @@ nav ul {
 }
 
 nav ul li {
-    width: 100%; /* Make the links full width */
+    /* width: 100%;*/
     text-align: center;
     margin-bottom: 20px;
 }
 
 nav ul li a {
-    display: block; /* Make the anchor tag a block element */
+    display: inline-block;
     color: #9bd6a5;
     text-decoration: none;
     font-size: 1.2rem;
-    padding: 5px;
+    /* padding: 5px; */
+    padding: 10px 20px;
     transition: all 0.3s ease-in-out;
-    width: 100%;
+    /* width: 100%; */
+    border-radius: 50px; 
 }
 
 nav ul li a:hover {
@@ -63,13 +67,33 @@ nav ul li a:hover {
 
 nav .logo img {
     width: 250px;
-    margin-bottom: 30px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.book-now {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-book-now {
+    display: inline-block;
+    background-color: #9bd6a5;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 80% !important;
+
+}
+
+.btn-book-now:hover {
+    background-color: #7ac495; /* Darken on hover */
 }
 
 
-main {
-    /* padding: 20px; */
-}
 
 h1, h2 {
     color: #9bd6a5;
@@ -84,16 +108,66 @@ h1, h2 {
     background: url('/images/optimized.gif') no-repeat center center/cover; /* Path to your GIF */
 }
 
+/* Base styles for the overlay text */
 .overlay-text {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    right: 5%; /* Right-align the text */
+    transform: translateY(-50%);
+    text-align: right;
     color: white;
     font-size: 3rem;
+    max-width: 40%; /* Ensure the text doesn't overflow */
 }
 
+/* Subtitle styles */
 .overlay-text p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .overlay-text {
+        right: 10%; /* Move the text closer to the center on medium screens */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 992px) {
+    .overlay-text {
+        right: 15%; /* Move the text further to the center */
+        max-width: 60%;
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .overlay-text p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay-text {
+        right: 5%; /* Keep a bit of space from the right */
+        max-width: 70%;
+        font-size: 2rem; /* Further reduce font size */
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-text {
+        right: 0; /* Center the text on small screens */
+        left: 0;
+        transform: translate(0, -50%);
+        text-align: center;
+        max-width: 90%; /* Allow the text more space on small screens */
+        font-size: 1.8rem;
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
 }

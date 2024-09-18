@@ -14,6 +14,8 @@
             <div class="logo">
                 <img src="/images/logo.png" alt="Meraki Therapeutics Logo">
             </div>
+            <!-- <div class="hamburger" id="hamburger">&#9776;</div> Hamburger icon -->
+            <!-- <div class="close" id="close">&times;</div> Close icon -->
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/why_meraki">Why Meraki</a></li>
@@ -23,6 +25,10 @@
                 <li><a href="/services">Specials + Events</a></li>
                 <li><a href="/services">Location + Hours</a></li>
                 <li><a href="/faq">FAQ</a></li>
+
+                <li class="book-now">
+                    <a href="https://merakitherapeutics.janeapp.com/" class="btn-book-now">Book Now</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -30,10 +36,29 @@
     <main>
         <div class="fullscreen-gif">
             <div class="overlay-text">
-                <h1>Welcome to Meraki Therapeutics</h1>
-                <p>Where your wellness matters</p>
+                <p>Massage Professionals at Tsawwassen Commons.</p>
+                <h1>Where your wellness matters.</h1>
+
             </div>
         </div>
     </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const closeIcon = document.getElementById('close');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.add('show');
+            hamburger.style.display = 'none';
+            closeIcon.style.display = 'block';
+        });
+
+        closeIcon.addEventListener('click', () => {
+            navMenu.classList.remove('show');
+            closeIcon.style.display = 'none';
+            hamburger.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
