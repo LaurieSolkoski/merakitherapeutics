@@ -13,36 +13,41 @@ header {
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Adjust this width as per your needs */
+    height: 100vh; /* Full height */
+    background-color: white; 
+    padding-top: 50px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 1000;
     display: flex;
+    flex-direction: column; /* Stack items vertically */
     align-items: center;
-    justify-content: space-between;
-    padding: 0 80px;
-    position: fixed;  /* Sticky position */
-    top: 0;  /* Stick to the top of the viewport */
-    z-index: 1000;  /* Ensure it stays above other content */
-    background-color: white;  /* Background color to avoid transparency when sticky */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for effect */
 }
 
 nav ul {
-    margin-top: 2%;
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    width: 100%; /* Ensure it stretches to the width of the navbar */
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+    width: 100%; /* Make the links full width */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 nav ul li a {
+    display: block; /* Make the anchor tag a block element */
     color: #9bd6a5;
     text-decoration: none;
     font-size: 1.2rem;
-    padding: 10px 15px;
-    position: relative;
+    padding: 5px;
     transition: all 0.3s ease-in-out;
-    text-decoration: none;
+    width: 100%;
 }
 
 nav ul li a:hover {
@@ -54,7 +59,8 @@ nav ul li a:hover {
 }
 
 nav .logo img {
-    height: 150px; /* Adjust as needed */
+    width: 200px;
+    margin-bottom: 30px;
 }
 
 
