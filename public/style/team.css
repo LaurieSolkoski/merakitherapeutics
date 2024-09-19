@@ -1,0 +1,547 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.691) !important;
+    overflow-y: auto;
+    height: 100%;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.691) !important;
+    color: #e6e6faa4 !important;
+    /* padding: 15px 0; */
+    text-align: center;
+}
+
+
+.nav-text {
+    position:relative;
+    text-align: center;
+    color: white !important;
+    font-size: 1rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    line-height: 1;
+}
+
+nav {
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 340px; 
+    height: 100%; 
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    z-index: 1000; /* Higher than the fullscreen GIF */
+
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass for Safari */
+    border-right: 1px solid rgba(255, 255, 255, 0.311); /* Light border for effect */
+    /* padding-top: 50px; */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 1;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+
+    width: 100%; /* Ensure it stretches to the width of the navbar */
+    margin-top: 10%;
+}
+
+nav ul li {
+    /* width: 100%;*/
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #A7D5A2;
+    text-decoration: none;
+    font-size: 1.2rem;
+    /* padding: 5px; */
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+    /* width: 100%; */
+    border-radius: 50px; 
+    /* font-weight: bold !important; */
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #a8c5b4;
+    background-color: rgba(230, 230, 250, 0.3); 
+    box-shadow: 0 0 10px 5px rgba(230, 230, 250, 0.5);
+    border-radius: 50px; 
+}
+
+nav .logo img {
+    width: 320px;
+    height: 150px;
+    margin-bottom: 15px;
+    margin-top: 5%;
+    margin-right:1.5%;
+}
+
+.book-now {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-book-now {
+    display: inline-block;
+    background-color: #A7D5A2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 80% !important;
+
+}
+
+.btn-book-now:hover {
+    background-color: #7ac495; /* Darken on hover */
+}
+
+
+
+h1, h2 {
+    color: #9bd6a5;
+    font-size: 120% !important;
+}
+
+
+.fullscreen-gif {
+    position: relative;
+    width: 100%;
+    height: 110vh; /* Fullscreen height */
+    background: url('/images/optimized.gif') no-repeat center center/cover; /* Path to your GIF */
+    display: flex;
+    justify-content: flex-start; /* Align items on the left */
+    align-items: center; /* Vertically center */
+
+}
+
+
+/* Base styles for the overlay text */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    right: 5%; /* Right-align the text */
+    transform: translateY(-50%);
+    text-align: right;
+    color: white;
+    font-size: 3rem;
+    max-width: 60%; /* Ensure the text doesn't overflow */
+}
+
+/* Subtitle styles */
+.overlay-text p {
+    font-size: 1.6rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .overlay-text {
+        right: 10%; /* Move the text closer to the center on medium screens */
+        max-width: 50%;
+    }
+}
+
+
+@media (max-width: 990px) {
+    .overlay-text {
+        right: 15%; /* Move the text further to the center */
+        max-width: 40%;
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .overlay-text p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+}
+
+
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #4b4747;
+    border-radius: 2px solid #f5f1f1 !important;
+}
+
+
+/* where hamburger starts */
+@media (max-width: 750px) {
+    nav {
+        display: none ; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* background-color: #fffbfbe5; */
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-200%); /* Initially hide the nav above the viewport */
+    }
+
+    nav.active {
+        transform: translateY(0); /* Slide the nav down when active */
+    }
+
+    .hamburger-menu {
+        display: flex;
+
+    }
+
+    nav .logo img {
+        width: 320px;
+        height: 150px;
+        margin-bottom: 15px;
+        margin-top: 5%;
+        margin-right: 10%;
+    }
+
+    nav ul {
+        padding: 20px;
+        list-style: none;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+        color: #ffffff;
+        text-decoration: none;
+    
+    }
+    
+    .overlay-text {
+        transform: translate(0, -50%);
+        text-align: center !important;
+        max-width: 100%; /* Allow the text more space on small screens */
+        font-size: 1.8rem;
+        justify-content: center;
+        left: 18%;
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .overlay-text {
+        left: 18%;
+        transform: translate(0, -50%);
+        text-align: center !important;
+        justify-content: center !important;
+        max-width: 90%; /* Allow the text more space on small screens */
+        font-size: 1.8rem;
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* Meraki section styles */
+.meraki-block {
+    background-color: #A7D5A2; /* Light green background */
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    color: white;
+    overflow: hidden; 
+    padding: 12%;
+}
+
+.meraki-logo {
+    position: absolute; 
+    top: 50%; /* Center vertically */
+    left: 2%; /* Position the logo on the left */
+    transform: translateY(-50%); /* Only center vertically */
+    opacity: 0.2; 
+    width: 120px; /* Adjust the width of the logo */
+    height: auto; /* Let the height adjust automatically */
+    z-index: 0; /* Keep it behind the text */
+}
+
+
+/* Main heading styling */
+.meraki-block h1 {
+    font-size: 3rem !important; /* Large title font */
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+    color: white !important;
+    font-family: 'Merriweather', serif;
+}
+
+/* Description text styling */
+.meraki-block p {
+    font-size: 1.2rem;
+    max-width: 800px; /* Restrict width for better readability */
+    margin: 0 auto; /* Center the paragraph */
+    line-height: 1.5;
+    font-family: 'Merriweather', serif;
+
+}
+
+
+.june-block {
+    display: flex; /* Arrange content and image side by side */
+    align-items: center;
+    background-color: #f5f5f536 !important; /* Light background similar to the example */
+    padding: 100px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.june-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 130%;
+    background: url('/images/june.jpg') no-repeat center center/cover;
+    opacity: 0.6; /* Semi-transparent background image */
+    z-index: 0; /* Ensure it's behind the content */
+}
+
+.june-content {
+    flex: 1; /* Content takes up the other part of the width */
+    max-width: 500px;
+    background: white;
+    padding: 20px 40px;
+    margin-right: 20px; /* Adds spacing between content and image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    z-index: 1; /* Keep content above the image */
+    border-radius: 45px;
+}
+
+.june-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Dark text for contrast */
+}
+
+.june-content h3 {
+    font-size: 1.2rem;
+    color: #e74c3c; /* Red color for title */
+    margin-bottom: 20px;
+}
+
+.june-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 1000px) {
+    .june-block {
+        flex-direction: column; /* Stack image on top of the content */
+        padding: 0; /* Remove padding to align elements properly */
+    }
+
+    .june-image {
+        width: 100%; /* Ensure the image takes the full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 0; /* Remove extra spacing */
+        z-index: 1; /* Ensure the image stays visible */
+        opacity: 1 !important;
+    }
+
+    .june-content {
+        width: 120% !important; /* Make the content also take the full width */
+        max-width: 120% !important;/* Remove max-width restriction */
+        margin-top: 290px !important;
+        padding: 15% !important;
+        border-radius: 0 !important;
+        position: relative;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .june-content {
+        width: 100%; /* Make the content also take the full width */
+        max-width: 140%; /* Remove max-width restriction */
+        margin-top: 150px ;
+        z-index: 2; /* Keep content on top of the image if needed */
+        border-radius: 0 !important;
+        position: relative;
+    }
+}
+
+@media (max-width: 400px) {
+    .june-image {
+        width: 100%; /* Ensure the image takes the full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 0; /* Remove extra spacing */
+        z-index: 1; /* Ensure the image stays visible */
+        opacity: 1 !important;
+    }
+    .june-content {
+        width: 100%; /* Make the content also take the full width */
+        max-width: 140%; /* Remove max-width restriction */
+        margin-top: 100px !important;
+        z-index: 2; /* Keep content on top of the image if needed */
+        border-radius: 0 !important;
+        position: relative;
+    }
+}
+
+
+
+.essa-block {
+    position: relative; /* Establishes positioning context */
+    display: flex; /* Flex layout for content and image */
+    align-items: center;
+    justify-content: flex-end; /* Pushes the content to the right */
+    background-color: #f5f5f536 !important; /* Light background similar to the example */
+    padding: 100px; 
+    overflow: hidden;
+    min-height: 500px; /* Ensure enough height for the section */
+}
+
+.essa-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 130%;
+    background: url('/images/essa.jpg') no-repeat center center/cover;
+    opacity: 0.6; /* Semi-transparent background image */
+    z-index: 0; /* Ensure it's behind the content */
+}
+
+
+.essa-content {
+    position: relative;
+    z-index: 1; /* Keep content above the image */
+    max-width: 500px;
+    background: white;
+    padding: 20px 40px;
+    margin-right: 40px; /* Adjusts spacing from the right edge */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border-radius: 45px;
+    text-align: left; /* Align text within the content box */
+}
+
+.essa-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333; /* Dark text for contrast */
+}
+
+.essa-content h3 {
+    font-size: 1.2rem;
+    color: #e74c3c; /* Red color for title */
+    margin-bottom: 20px;
+}
+
+.essa-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 1000px) {
+    .essa-block {
+        flex-direction: column; /* Stack image on top of the content */
+        padding: 0; /* Remove padding to align elements properly */
+    }
+
+    .essa-image {
+        width: 100%; /* Ensure the image takes the full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 0; /* Remove extra spacing */
+        z-index: 1; /* Ensure the image stays visible */
+        opacity: 1 !important;
+    }
+
+    .essa-content {
+        width: 120% !important; /* Make the content also take the full width */
+        max-width: 120% !important;/* Remove max-width restriction */
+        margin-top: 290px !important;
+        padding: 15% !important;
+        border-radius: 0 !important;
+        position: relative;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .essa-content {
+        width: 100%; /* Make the content also take the full width */
+        max-width: 140%; /* Remove max-width restriction */
+        margin-top: 150px ;
+        z-index: 2; /* Keep content on top of the image if needed */
+        border-radius: 0 !important;
+        position: relative;
+    }
+}
+
+@media (max-width: 400px) {
+    .essa-image {
+        width: 100%; /* Ensure the image takes the full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 0; /* Remove extra spacing */
+        z-index: 1; /* Ensure the image stays visible */
+        opacity: 1 !important;
+    }
+    .essa-content {
+        width: 100%; /* Make the content also take the full width */
+        max-width: 140%; /* Remove max-width restriction */
+        margin-top: 100px !important;
+        z-index: 2; /* Keep content on top of the image if needed */
+        border-radius: 0 !important;
+        position: relative;
+    }
+}
+
+
+
+
+
+
+
