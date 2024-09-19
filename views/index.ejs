@@ -16,8 +16,6 @@
             <div class="logo">
                 <a href="/"> <img src="/images/logo.png" alt="Meraki Therapeutics Logo"> </a>
             </div>
-            <!-- <div class="hamburger" id="hamburger">&#9776;</div> Hamburger icon -->
-            <!-- <div class="close" id="close">&times;</div> Close icon -->
             <ul>
                 <li>
                     <a href="/why_meraki">Why Meraki</a></li>
@@ -37,14 +35,17 @@
                 <p>Or Call</p>
                 <p>604-383-0123</p>
             </div>
-
-            </ul>
-
    
 
         </nav>
 
 
+         <!-- Hamburger Icon -->
+         <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
             <div class="overlay-text">
                 <p>Massage Professionals at Tsawwassen Commons.</p>
@@ -79,6 +80,17 @@
     
     </main>
 
+    <script>
+        // Select the hamburger menu and nav
+        const hamburger = document.getElementById('hamburger-menu');
+        const nav = document.querySelector('nav');
+    
+        // Toggle the nav visibility when the hamburger icon is clicked
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+    </script>
+    
     
 </body>
 </html>

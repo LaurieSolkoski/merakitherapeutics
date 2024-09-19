@@ -138,7 +138,7 @@ h1, h2 {
     text-align: right;
     color: white;
     font-size: 3rem;
-    max-width: 40%; /* Ensure the text doesn't overflow */
+    max-width: 60%; /* Ensure the text doesn't overflow */
 }
 
 /* Subtitle styles */
@@ -154,10 +154,11 @@ h1, h2 {
     }
 }
 
-@media (max-width: 992px) {
+
+@media (max-width: 990px) {
     .overlay-text {
         right: 15%; /* Move the text further to the center */
-        max-width: 60%;
+        max-width: 40%;
         font-size: 2.5rem; /* Reduce font size for smaller screens */
     }
 
@@ -166,11 +167,51 @@ h1, h2 {
     }
 }
 
-@media (max-width: 768px) {
+
+
+/* Hide the hamburger icon by default */
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001; /* Ensure it's above the nav */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+
+/* Hamburger lines */
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+
+
+
+/* where hamburger starts */
+@media (max-width: 750px) {
+    nav {
+        display: none !important; 
+    }
+
+    .hamburger-menu {
+        display: flex !important; /* Show the hamburger icon */
+    }
+    
     .overlay-text {
-        right: 5%; /* Keep a bit of space from the right */
-        max-width: 70%;
-        font-size: 2rem; /* Further reduce font size */
+        transform: translate(0, -50%);
+        text-align: center !important;
+        max-width: 100%; /* Allow the text more space on small screens */
+        font-size: 1.8rem;
+        justify-content: center;
+        left: 18%;
     }
 
     .overlay-text p {
@@ -178,12 +219,14 @@ h1, h2 {
     }
 }
 
+
+
 @media (max-width: 480px) {
     .overlay-text {
-        right: 0; /* Center the text on small screens */
-        left: 0;
+        left: 18%;
         transform: translate(0, -50%);
-        text-align: center;
+        text-align: center !important;
+        justify-content: center !important;
         max-width: 90%; /* Allow the text more space on small screens */
         font-size: 1.8rem;
     }
