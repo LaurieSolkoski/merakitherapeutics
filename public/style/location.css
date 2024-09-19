@@ -501,11 +501,80 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
+/* MAP block */
+#map {
+    height: 600px;
+    width: 100%; /* Make the map take up the full width */
+    margin: 0; /* Remove any margins */
+    float: none; /* Ensure it doesn't float, so it spans the full width */
+}
+
+
+.location-details {
+    position: absolute; /* Position it directly on top of the map */
+    top: 15%; /* Adjust as needed to position the section properly */
+    left: 10%; /* Adjust as needed to position the section properly */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 50% opacity */
+    padding: 20px;
+    border-radius: 8px; /* Optional: rounded corners */
+    z-index: 1000; /* Ensure it appears above the map */
+    width: 30%; /* Adjust width as needed */
+    height: 80%;
+    font-family: Arial, sans-serif;
+    line-height: 2.5;
+}
+
+
+.location-details h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.location-details p {
+    margin: 5px 0;
+}
+
+.location-details h5 {
+    margin: 5px 0;
+    color: #dd8a1c;
+    line-height: 2;
+}
 
 
 
 
+@media (max-width: 900px) {
+    .location-details {
+        top: 5%; /* Adjust top position for more content visibility */
+        left: 5%;
+        width: 40%; /* Expand width to make better use of available space */
+        height: 65%;
+        max-width: none; /* Remove max-width for full flexibility */
+        padding: 10px; /* Slightly reduced padding for compactness */
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
 
+    .location-details h3 {
+        font-size: 1.8rem; /* Adjust heading size for smaller screens */
+    }
+}
+
+@media (max-width: 750px) {
+    .location-details {
+        position: static; /* Position it normally within the document flow */
+        width: 100%; /* Take up the full width of the page */
+        margin: 0; /* Remove any margins */
+        border-radius: 0; /* Remove rounded corners */
+        top: 0; /* Reset top positioning */
+        left: 0; /* Reset left positioning */
+        height: auto; /* Allow the height to adjust based on content */
+        padding: 20px 10px; /* Adjust padding to fit within the new layout */
+    }
+
+    #map {
+        margin-top: 0; /* Ensure there is no overlap with the location details */
+    }
+}
 
 
 

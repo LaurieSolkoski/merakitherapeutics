@@ -75,7 +75,19 @@
     
 
 
-        <section id="faq">
+        <div id="map-container" style="position: relative;">
+            <div id="map"></div>
+            <section class="location-details">
+                <h3>Our location</h3>
+                <p>#352 - 4949 Canoe Pass Way<br>Delta, BC V4M 0B2</p>
+                <h5>Mons - Sats: 10AM - 10PM<br>Sundays: 10AM - 7PM</h5>
+                <h5>*Early 7AM (RMT appts only)<br>*Statutory Holidays: RMT appts available only</h5>
+                <p><strong>604-383-0123</strong></p>
+            </section>
+        </div>
+        
+
+        <!-- <section id="faq">
             <h2>FAQ</h2>
 
             <form action="/submit-form" method="POST">
@@ -92,7 +104,7 @@
               </form>
               
    
-        </section>
+        </section> -->
         
     </main>
 
@@ -106,6 +118,81 @@
             nav.classList.toggle('active');
         });
     </script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= apiKey %>&callback=initMap" async defer></script>
+
+<script>
+ function initMap() {
+    const center = { lat:  49.042886158002034, lng: -123.08259068262518}; // Center coordinates for the location
+  
+    const mapOptions = {
+        center: center,
+        zoom: 14,
+        mapTypeId: 'roadmap',
+        disableDefaultUI: true, // Disable all map controls
+        gestureHandling: 'none', // Disable all gestures (dragging, zooming, etc.)
+        zoomControl: false, // Disable zoom control
+        scrollwheel: false, // Disable zooming by scrolling
+        draggable: false, // Disable map dragging
+    };
+
+    const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    // Marker data
+
+    const redMarker = new google.maps.Marker({
+        position: { lat: 49.042886158002034, lng: -123.08259068262518 }, // Your specified coordinates
+        map: map,
+        title: 'Location Marker',
+        // icon: {
+        //     url: "http://maps.google.com/mapfiles/ms/icons/marker.png" 
+        // }
+    });
+
+    // Optional: Add an info window to the red marker if needed
+    const infoWindow = new google.maps.InfoWindow({
+        content: `<h3>Meraki Therapeutics Location</h3><p>Exact location: 4949 Canoe Pass Wy #352, Delta, BC V4M 0B2</p>`
+    });
+
+    redMarker.addListener('click', () => {
+        infoWindow.open(map, redMarker);
+    });
+
+    const locations = [
+        {
+            position: { lat: 49.0093, lng: -123.0899 },
+            title: 'Walmart Supercentre',
+            info: '4949 Canoe Pass Way, Delta, BC V4M 0B2, Canada'
+        },
+        {
+            position: { lat: 49.0105, lng: -123.0847 },
+            title: 'Bass Pro Shops',
+            info: '5000 Canoe Pass Wy, Tsawwassen, BC V4M 0B3, Canada'
+        }
+    ];
+
+    // Add markers and info windows
+    locations.forEach(location => {
+        const marker = new google.maps.Marker({
+            position: location.position,
+            map: map,
+            title: location.title
+        });
+
+        const infoWindow = new google.maps.InfoWindow({
+            content: `<h3>${location.title}</h3><p>${location.info}</p>`
+        });
+
+        // Show info window on marker click
+        marker.addListener('click', () => {
+            infoWindow.open(map, marker);
+        });
+    });
+}
+
+
+</script>
     
     
 </body>

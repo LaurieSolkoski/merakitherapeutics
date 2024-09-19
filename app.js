@@ -70,8 +70,13 @@ app.get('/faq', (req, res) => {
 });
 
 app.get('/location', (req, res) => {
-  res.render('location', { title: 'Location + Hours' });
+  res.render('location', { 
+      title: 'Location + Hours', 
+      apiKey: process.env.GOOGLE_MAPS_API_KEY 
+  });
 });
+
+
 
 app.get('/privacy-policy', (req, res) => {
   res.render('privacy-policy', { title: 'Privacy and Policy' });
