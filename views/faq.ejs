@@ -3,45 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/faq.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <title><%= title %></title>
 </head>
 <body>
     <header>
-        <h1>FAQ</h1>
+        <div class="fullscreen-gif">
         <nav>
+            <div class="logo">
+                <a href="/"> <img src="/images/Meraki-Logo-Colour-RGB.png" alt="Meraki Therapeutics Logo"> </a>
+            </div>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/why_meraki">Why Meraki</a></li>
-                <li><a href="/team">Meet the Team</a></li>
-                <li><a href="/faq">FAQ</a></li>
+                <li>
+                    <a href="/why_meraki">Why Meraki</a></li>
+                <li><a href="/team">Our Team</a></li>
+                <li><a href="/services">Treatments</a></li>
 
-            </ul>
+                <li><a href="/services">Specials + Events</a></li>
+                <li><a href="/location">Location + Hours</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <img src = "/images/Meraki-Logo-Colour-RGB-cropped.png" class="meraki-logo-right">
+
+
+                <li class="book-now">
+                    <a href="https://merakitherapeutics.janeapp.com/" class="btn-book-now">Book Now</a>
+                </li>
+
+
+            <div class="nav-text">
+                <p>Or Call</p>
+                <p>604-383-0123</p>
+            </div>
+   
+
         </nav>
+
+
+         <!-- Hamburger Icon -->
+         <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+            <div class="overlay-text">
+                <p>What You Should Know</p>
+                <h1>Frequently Asked Questions</h1>
+
+            </div>
+        </div>
+
     </header>
 
-    <main>
-        <section id="faq">
-            <h2>FAQ</h2>
 
-            <form action="/submit-form" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-              
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-              
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-              
-                <button type="submit">Submit</button>
-              </form>
-              
-   
+
+    <main>
+
+          <!-- Toggle sections -->
+          <section class="faq-section">
+            <div class="faq-item">
+                <div class="faq-header">
+                    <p class="faq-question">What should I bring?</p>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You do not have to bring anything to your treatment except for <strong>"you"</strong>.</p>
+                    <p>No matter how hectic your day is or where you are coming from...</p>
+                    <p>We have robes available for you to change and unwind into if needed.</p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <div class="faq-header">
+                    <p class="faq-question">What should I leave at home?</p>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Loud Voices: </strong> Meraki is a place of sanctuary and relaxation from the outside world where you can enjoy some much needed quiet time. We ask that you please be respectful of other guests who may be seeking quiet solitude and keep you voices down.</p>
+
+                    <p><strong>Heavy Scents: </strong> Please do not wear any heavy perfume, cologne, body spray, etc... while visiting Meraki. </p>
+                    
+                        <p><strong>Valuables: </strong> Please leave your valuables at home as we are not responsible for lost or stolen items. </p>
+                </div>
+            </div>
+
+
+
+            <div class="faq-item">
+                <div class="faq-header">
+                    <p class="faq-question">What if I’m late for an appointment?</p>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We understand that sometimes life happens and you may run a few minutes behind...</p>
+                    <p>We will try our best to accommodate your full session, however based on availability and limited time allowances in between bookings we may need to shorten your session.</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="faq-item">
+                <div class="faq-header">
+                    <p class="faq-question">What are your cancellation policies?</p>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Please give us a call at <strong>604-383-0123</strong>, to reschedule or cancel your appointment by phone during our business hours with<strong> 24 hours notice</strong>.</p>
+                    <p><strong>If you cancel your appointment or "no show" with less than 24 hours notice, we reserve the right to charge your credit card for the full amount of your appointment.</p></strong>                    </p>
+                </div>
+            </div>
+
+
+            <div class="faq-item">
+                <div class="faq-header">
+                    <p class="faq-question">Where do I find parking?</p>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Free parking is conveniently available in front of Meraki Therapeutics and surrounding areas within the Tsawwassen Commons.</p>
+                </div>            
+            </div>
         </section>
+        
+
+
+
+
+
     </main>
+
+    <script>
+        // Select the hamburger menu and nav
+        const hamburger = document.getElementById('hamburger-menu');
+        const nav = document.querySelector('nav');
+    
+        // Toggle the nav visibility when the hamburger icon is clicked
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+    const toggle = item.querySelector('.faq-toggle');
+    const answer = item.querySelector('.faq-answer');
+    const header = item.querySelector('.faq-header');
+
+    header.addEventListener('click', function() {
+        // Toggle active state
+        item.classList.toggle('active');
+
+        // Toggle answer display and icon
+        if (item.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px'; // Expand to content height
+            toggle.textContent = '-'; // Change to minus when active
+        } else {
+            answer.style.maxHeight = null; // Collapse back
+            toggle.textContent = '+'; // Change back to plus when inactive
+        }
+    });
+});
+
+    
+</script>
+    
+    
 </body>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>© 2024 Meraki Therapeutics</p>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="https://www.instagram.com/laurieekins/">Web Design by Laurie Solkoski</a>
+        </div>
+        <div class="footer-right">
+            <a href="https://www.facebook.com/merakitherapeutics" target="_blank" class="social-icon">
+                <img src="/images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/merakitherapeutics/" target="_blank" class="social-icon">
+                <img src="/images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
 </html>

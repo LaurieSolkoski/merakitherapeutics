@@ -1,0 +1,452 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.691) !important;
+    overflow-y: auto;
+    height: 100%;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.691) !important;
+    color: #e6e6faa4 !important;
+    /* padding: 15px 0; */
+    text-align: center;
+}
+
+.meraki-logo-right {
+    position: absolute; 
+    top: 80%; /* Center vertically */
+    right: 0.1%; /* Position the logo on the left */
+    transform: translateY(-50%); /* Only center vertically */
+    opacity: 0.3; 
+    width: 120px; /* Adjust the width of the logo */
+    height: auto; /* Let the height adjust automatically */
+    z-index: 0; /* Keep it behind the text */
+}
+
+
+.nav-text {
+    position:relative;
+    text-align: center;
+    color: #231F20;
+    /* color: white !important; */
+    font-size: 1rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    line-height: 1;
+}
+
+nav {
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 340px; 
+    height: 100%; 
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    z-index: 1000; /* Higher than the fullscreen GIF */
+
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass for Safari */
+    border-right: 1px solid rgba(255, 255, 255, 0.311); /* Light border for effect */
+    /* padding-top: 50px; */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 1;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+
+    width: 100%; /* Ensure it stretches to the width of the navbar */
+    margin-top: 10%;
+}
+
+nav ul li {
+    /* width: 100%;*/
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+nav ul li a {
+    display: inline-block;
+    /* color: #A7D5A2; */
+    color: #231F20;
+    text-decoration: none;
+    font-size: 1.2rem;
+    /* padding: 5px; */
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+    /* width: 100%; */
+    border-radius: 50px; 
+    /* font-weight: bold !important; */
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #a8c5b4;
+    background-color: rgba(230, 230, 250, 0.3); 
+    box-shadow: 0 0 10px 5px rgba(230, 230, 250, 0.5);
+    border-radius: 50px; 
+}
+
+nav .logo img {
+    width: 280px;
+    height: 140px;
+    margin-bottom: 15px;
+    margin-top: 10%;
+    margin-right:1.5%;
+}
+
+.book-now {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-book-now {
+    display: inline-block;
+    background-color: #A7D5A2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 80% !important;
+
+}
+
+.btn-book-now:hover {
+    background-color: #7ac495; /* Darken on hover */
+}
+
+
+
+h1, h2 {
+    color: #231F20;
+    font-size: 120% !important;
+}
+
+/* 
+.fullscreen-gif {
+    position: relative;
+    width: 100%;
+    height: 110vh; 
+    background: url('/images/terms.jpg') no-repeat center center/cover; 
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    opacity: 0.9;
+} */
+
+
+.fullscreen-gif {
+    position: relative;
+    width: 100%;
+    height: 110vh; /* Fullscreen height */
+    display: flex;
+    justify-content: flex-start; /* Align items on the left */
+    align-items: center; /* Vertically center */
+}
+
+.fullscreen-gif::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/flower.jpg') no-repeat center center/cover;
+    opacity: 0.5; /* Set the opacity of the background image */
+    z-index: 0; /* Ensure it is behind all content */
+}
+
+nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
+    position: relative;
+    z-index: 1; /* Ensure content stays above the background overlay */
+    opacity: 1; /* Keep all nav elements fully visible */
+}
+
+
+/* Base styles for the overlay text */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    right: 5%; /* Right-align the text */
+    transform: translateY(-50%);
+    text-align: right;
+    color: #231F20;
+    font-size: 3rem;
+    max-width: 60%; /* Ensure the text doesn't overflow */
+}
+
+/* Subtitle styles */
+.overlay-text p {
+    font-size: 1.6rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .overlay-text {
+        right: 10%; /* Move the text closer to the center on medium screens */
+        max-width: 50%;
+    }
+}
+
+
+@media (max-width: 990px) {
+    .overlay-text {
+        right: 15%; /* Move the text further to the center */
+        max-width: 40%;
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .overlay-text p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+}
+
+
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #4b4747;
+    border-radius: 2px solid #f5f1f1 !important;
+}
+
+
+/* where hamburger starts */
+@media (max-width: 750px) {
+    nav {
+        display: none ; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* background-color: #fffbfbe5; */
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-200%); /* Initially hide the nav above the viewport */
+    }
+
+    nav.active {
+        transform: translateY(0); /* Slide the nav down when active */
+    }
+
+    .hamburger-menu {
+        display: flex;
+
+    }
+
+    nav .logo img {
+        width: 320px;
+        height: 150px;
+        margin-bottom: 15px;
+        margin-top: 5%;
+        margin-right: 10%;
+    }
+
+    nav ul {
+        padding: 20px;
+        list-style: none;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+        color: #ffffff;
+        text-decoration: none;
+    
+    }
+    
+    .overlay-text {
+        transform: translate(0, -50%);
+        text-align: center !important;
+        max-width: 100%; /* Allow the text more space on small screens */
+        font-size: 1.8rem;
+        justify-content: center;
+        left: 18%;
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .overlay-text {
+        left: 18%;
+        transform: translate(0, -50%);
+        text-align: center !important;
+        justify-content: center !important;
+        max-width: 90%; /* Allow the text more space on small screens */
+        font-size: 1.8rem;
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+/* Toggle section */
+.faq-section {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.faq-toggle {
+    color: #A7D5A2;
+    font-size: 60px !important;
+    margin-left: auto;
+    min-width: 20px;
+    text-align: right;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, padding 0.6s ease; /* Slow easing transition */
+    padding: 0 0;
+    line-height: 3;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px; /* Adjust based on expected content height */
+    padding: 10px 0; /* Add padding when expanding */
+}
+
+
+
+
+
+
+
+
+
+.site-footer {
+    background-color: #ffffff; /* Footer background color */
+    padding: 20px 40px; /* Padding for the footer */
+    border-top: 1px solid #e0e0e0; /* Subtle border at the top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between left and right content */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Center content with a max-width */
+}
+
+.footer-left {
+    display: flex;
+    gap: 20px; /* Space between footer links */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    color: #333; /* Text color */
+}
+
+.footer-left a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+    color: #7ac495; /* Hover color for links */
+}
+
+.footer-right {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icon img {
+    width: 50px; /* Icon size */
+    height: 50px;
+    transition: filter 0.3s ease;
+    margin: 20%;
+}
+
+.social-icon img:hover {
+    filter: opacity(1); /* Full opacity on hover */
+}
+
+
+@media (max-width: 500px) {
+    .site-footer {
+        padding: 10px 20px; 
+        flex-direction: column; 
+    }
+
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px; 
+    }
+
+    .footer-left {
+        flex-direction: column; 
+        gap: 10px;
+        text-align: center; 
+    }
+
+    .footer-right {
+        justify-content: center; 
+    }
+
+    .social-icon img {
+        width: 40px; 
+        height: 40px;
+        margin: 0; 
+    }
+}
