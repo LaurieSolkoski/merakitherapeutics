@@ -114,7 +114,7 @@ nav .logo img {
 
 
 h1, h2 {
-    color: #9bd6a5;
+    color: #231F20;
     font-size: 120% !important;
 }
 
@@ -123,11 +123,11 @@ h1, h2 {
     position: relative;
     width: 100%;
     height: 110vh; /* Fullscreen height */
-    background: url('/images/optimized.gif') no-repeat center center/cover; /* Path to your GIF */
+    background: url('/images/terms.jpg') no-repeat center center/cover; 
     display: flex;
     justify-content: flex-start; /* Align items on the left */
     align-items: center; /* Vertically center */
-
+    opacity: 0.9;
 }
 
 
@@ -138,7 +138,7 @@ h1, h2 {
     right: 5%; /* Right-align the text */
     transform: translateY(-50%);
     text-align: right;
-    color: white;
+    color: #231F20;
     font-size: 3rem;
     max-width: 60%; /* Ensure the text doesn't overflow */
 }
@@ -319,224 +319,78 @@ h1, h2 {
 }
 
 
-.june-block {
-    display: flex; /* Arrange content and image side by side */
-    align-items: center;
-    background-color: #f5f5f536 !important; /* Light background similar to the example */
-    padding: 100px;
+
+
+/* Soma Block Styles */
+.soma-block {
     position: relative;
-    overflow: hidden;
-
-}
-
-.june-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 120%;
-    height: 130%;
-    background: url('/images/june.jpg') no-repeat center center/cover;
-    opacity: 0.6; /* Semi-transparent background image */
-    z-index: 0; /* Ensure it's behind the content */
-}
-
-.june-content {
-    flex: 1; /* Content takes up the other part of the width */
-    max-width: 500px;
-    background: white;
-    padding: 20px 40px;
-    margin-right: 20px; /* Adds spacing between content and image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    z-index: 1; /* Keep content above the image */
-    border-radius: 45px;
-}
-
-.june-content h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333; /* Dark text for contrast */
-}
-
-.june-content h3 {
-    font-size: 1.2rem;
-    color: #e74c3c; /* Red color for title */
-    margin-bottom: 20px;
-}
-
-.june-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-
-@media (max-width: 1000px) {
-    .june-block {
-        flex-direction: column; /* Stack image on top of the content */
-        padding: 0; /* Remove padding to align elements properly */
-    }
-
-    .june-image {
-        width: 100%; /* Ensure the image takes the full width */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Remove extra spacing */
-        z-index: 1; /* Ensure the image stays visible */
-        opacity: 1 !important;
-    }
-
-    .june-content {
-        width: 120% !important; /* Make the content also take the full width */
-        max-width: 120% !important;/* Remove max-width restriction */
-        margin-top: 290px !important;
-        padding: 15% !important;
-        border-radius: 0 !important;
-        position: relative;
-    }
-}
-
-
-@media (max-width: 600px) {
-    .june-content {
-        width: 100%; /* Make the content also take the full width */
-        max-width: 140%; /* Remove max-width restriction */
-        margin-top: 150px ;
-        z-index: 2; /* Keep content on top of the image if needed */
-        border-radius: 0 !important;
-        position: relative;
-    }
-}
-
-@media (max-width: 400px) {
-    .june-image {
-        width: 100%; /* Ensure the image takes the full width */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Remove extra spacing */
-        z-index: 1; /* Ensure the image stays visible */
-        opacity: 1 !important;
-    }
-    .june-content {
-        width: 100%; /* Make the content also take the full width */
-        max-width: 140%; /* Remove max-width restriction */
-        margin-top: 100px !important;
-        z-index: 2; /* Keep content on top of the image if needed */
-        border-radius: 0 !important;
-        position: relative;
-    }
-}
-
-
-
-.essa-block {
-    position: relative; /* Establishes positioning context */
-    display: flex; /* Flex layout for content and image */
+    /* background: url('/images/soma-background.jpg') no-repeat center center/cover;  */
+    height: 100vh; /* Fullscreen height */
+    display: flex;
+    justify-content: left;
     align-items: center;
-    justify-content: flex-end; /* Pushes the content to the right */
-    background-color: #f5f5f536 !important; /* Light background similar to the example */
-    padding: 100px; 
-    overflow: hidden;
-    min-height: 500px; /* Ensure enough height for the section */
+    padding: 12%;
 }
 
-.essa-image {
+.soma-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 120%;
-    height: 130%;
-    background: url('/images/essa.jpg') no-repeat center center/cover;
-    opacity: 0.6; /* Semi-transparent background image */
+    width: 100%;
+    height: 100%;
+    background: url('/images/soma.jpg') no-repeat center center/cover;
+    opacity: 0.5; /* Semi-transparent background image */
     z-index: 0; /* Ensure it's behind the content */
 }
 
 
-.essa-content {
-    position: relative;
-    z-index: 1; /* Keep content above the image */
+/* Soma content */
+.soma-content {
     max-width: 500px;
-    background: white;
-    padding: 20px 40px;
-    margin-right: 40px; /* Adjusts spacing from the right edge */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    border-radius: 45px;
-    text-align: left; /* Align text within the content box */
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px;
+    z-index: 1 !important; /* Ensure content is above the background */
+    position: relative;
 }
 
-.essa-content h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333; /* Dark text for contrast */
+/* Title and text */
+.soma-content h2 {
+    font-size: 3rem !important;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-.essa-content h3 {
-    font-size: 1.2rem;
-    color: #e74c3c; /* Red color for title */
-    margin-bottom: 20px;
-}
-
-.essa-content p {
-    font-size: 1rem;
-    line-height: 1.6;
+.soma-content p {
+    font-size: 1.2rem !important;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    line-height: 2.2 !important;
+    position: relative;
+    z-index: 1 !important; /* Ensures it is above the background */
+    opacity: 1 !important; /* Ensures the content is fully visible */
+
+
 }
 
+/* Learn More button */
+.btn-learn-more {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    /* background-color: white; */
+    color: #A7D5A2;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #A7D5A2 !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none !important;
 
-
-@media (max-width: 1000px) {
-    .essa-block {
-        flex-direction: column; /* Stack image on top of the content */
-        padding: 0; /* Remove padding to align elements properly */
-    }
-
-    .essa-image {
-        width: 100%; /* Ensure the image takes the full width */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Remove extra spacing */
-        z-index: 1; /* Ensure the image stays visible */
-        opacity: 1 !important;
-    }
-
-    .essa-content {
-        width: 120% !important; /* Make the content also take the full width */
-        max-width: 120% !important;/* Remove max-width restriction */
-        margin-top: 290px !important;
-        padding: 15% !important;
-        border-radius: 0 !important;
-        position: relative;
-    }
 }
 
-
-@media (max-width: 600px) {
-    .essa-content {
-        width: 100%; /* Make the content also take the full width */
-        max-width: 140%; /* Remove max-width restriction */
-        margin-top: 150px ;
-        z-index: 2; /* Keep content on top of the image if needed */
-        border-radius: 0 !important;
-        position: relative;
-    }
-}
-
-@media (max-width: 400px) {
-    .essa-image {
-        width: 100%; /* Ensure the image takes the full width */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Remove extra spacing */
-        z-index: 1; /* Ensure the image stays visible */
-        opacity: 1 !important;
-    }
-    .essa-content {
-        width: 100%; /* Make the content also take the full width */
-        max-width: 140%; /* Remove max-width restriction */
-        margin-top: 100px !important;
-        z-index: 2; /* Keep content on top of the image if needed */
-        border-radius: 0 !important;
-        position: relative;
-    }
+.btn-learn-more:hover {
+    background-color: #7ac495; /* Darker green on hover */
 }
 
 
@@ -544,26 +398,40 @@ h1, h2 {
 
 
 
-.meraki-logo-left {
-    position: absolute; 
-    top: 20%; /* Center vertically */
-    left: 2%; /* Position the logo on the left */
-    transform: translateY(-50%); /* Only center vertically */
-    opacity: 0.2; 
-    width: 120px; /* Adjust the width of the logo */
-    height: auto; /* Let the height adjust automatically */
-    z-index: 0; /* Keep it behind the text */
-}
+@media (max-width: 700px) {
+    .soma-block {
+        flex-direction: column; /* Stack content vertically */
+        padding: 50px !important; /* Reduce padding for smaller screens */
+        height: auto; /* Adjust height to fit content */
+    }
 
-.meraki-logo-right {
-    position: absolute; 
-    top: 70%; /* Center vertically */
-    right: 2%; /* Position the logo on the left */
-    transform: translateY(-50%); /* Only center vertically */
-    opacity: 0.2; 
-    width: 120px; /* Adjust the width of the logo */
-    height: auto; /* Let the height adjust automatically */
-    z-index: 0; /* Keep it behind the text */
+    .soma-image {
+        width: 100%;
+        height: 50vh; /* Reduce image height for smaller screens */
+        opacity: 0.5; /* Maintain the semi-transparent background */
+    }
+
+    .soma-content {
+        max-width: 100%; /* Make content take full width */
+        padding: 15px; /* Adjust padding for better readability */
+        border-radius: 8px; /* Slightly reduce the border-radius */
+    }
+
+    .soma-content h2 {
+        font-size: 2rem !important; /* Reduce font size for headings */
+        margin-bottom: 20px;
+    }
+
+    .soma-content p {
+        font-size: 1rem !important; /* Adjust paragraph font size */
+        margin-bottom: 20px;
+        line-height: 1.6 !important; /* Adjust line height for better readability */
+    }
+
+    .btn-learn-more {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 1rem; /* Reduce button font size */
+    }
 }
 
 

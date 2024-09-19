@@ -69,6 +69,10 @@ app.get('/faq', (req, res) => {
     res.render('faq', { title: 'FAQ' });
 });
 
+app.get('/privacy-policy', (req, res) => {
+  res.render('privacy-policy', { title: 'Privacy and Policy' });
+});
+
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
