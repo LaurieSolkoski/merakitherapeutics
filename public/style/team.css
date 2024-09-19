@@ -82,13 +82,12 @@ nav ul li a:hover {
 }
 
 nav .logo img {
-    width: 320px;
-    height: 150px;
+    width: 280px;
+    height: 140px;
     margin-bottom: 15px;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-right:1.5%;
 }
-
 .book-now {
     margin-top: 20px;
     text-align: center;

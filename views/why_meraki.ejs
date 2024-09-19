@@ -3,31 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/why_meraki.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <title><%= title %></title>
 </head>
 <body>
     <header>
-        <h1>Why Meraki</h1>
+        <div class="fullscreen-gif">
         <nav>
+            <div class="logo">
+                <a href="/"> <img src="/images/Meraki-Logo-Colour-RGB.png" alt="Meraki Therapeutics Logo"> </a>
+            </div>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/why_meraki">Why Meraki</a></li>
-                <li><a href="/team">Meet the Team</a></li>
-                <li><a href="/faq">FAQ</a></li>
+                <li>
+                    <a href="/why_meraki">Why Meraki</a></li>
+                <li><a href="/team">Our Team</a></li>
+                <li><a href="/services">Treatments</a></li>
 
-            </ul>
+                <li><a href="/services">Specials + Events</a></li>
+                <li><a href="/services">Location + Hours</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <img src = "/images/Meraki-Logo-Colour-RGB-cropped.png" class="meraki-logo-right">
+
+
+                <li class="book-now">
+                    <a href="https://merakitherapeutics.janeapp.com/" class="btn-book-now">Book Now</a>
+                </li>
+
+
+            <div class="nav-text">
+                <p>Or Call</p>
+                <p>604-383-0123</p>
+            </div>
+   
+
         </nav>
+
+
+         <!-- Hamburger Icon -->
+         <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+            <div class="overlay-text">
+                <p>Why Meraki</p>
+                <h1>We’re passionate about your wellness.</h1>
+
+            </div>
+        </div>
+
     </header>
 
+
+
     <main>
-        <section id="why_meraki">
-            <h2>Why Meraki</h2>
-   
-        </section>
+    
+
+        
     </main>
+
+    <script>
+        // Select the hamburger menu and nav
+        const hamburger = document.getElementById('hamburger-menu');
+        const nav = document.querySelector('nav');
+    
+        // Toggle the nav visibility when the hamburger icon is clicked
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+    </script>
+    
+    
 </body>
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <p>© 2024 Meraki Therapeutics</p>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="https://www.instagram.com/laurieekins/">Web Design by Laurie Solkoski</a>
+        </div>
+        <div class="footer-right">
+            <a href="https://www.facebook.com/merakitherapeutics" target="_blank" class="social-icon">
+                <img src="/images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/merakitherapeutics/" target="_blank" class="social-icon">
+                <img src="/images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
 </html>

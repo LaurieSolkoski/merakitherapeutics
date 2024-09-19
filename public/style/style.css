@@ -82,11 +82,22 @@ nav ul li a:hover {
 }
 
 nav .logo img {
-    width: 320px;
-    height: 150px;
+    width: 280px;
+    height: 140px;
     margin-bottom: 15px;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-right:1.5%;
+}
+
+.meraki-logo-right {
+    position: absolute; 
+    top: 80%; /* Center vertically */
+    right: 0.1%; /* Position the logo on the left */
+    transform: translateY(-50%); /* Only center vertically */
+    opacity: 0.3; 
+    width: 120px; /* Adjust the width of the logo */
+    height: auto; /* Let the height adjust automatically */
+    z-index: 0; /* Keep it behind the text */
 }
 
 .book-now {
