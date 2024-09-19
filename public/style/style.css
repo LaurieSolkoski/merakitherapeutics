@@ -62,7 +62,7 @@ nav ul li {
 
 nav ul li a {
     display: inline-block;
-    color: #9bd6a5;
+    color: #A7D5A2;
     text-decoration: none;
     font-size: 1.2rem;
     /* padding: 5px; */
@@ -96,7 +96,7 @@ nav .logo img {
 
 .btn-book-now {
     display: inline-block;
-    background-color: #9bd6a5;
+    background-color: #A7D5A2;
     color: white;
     padding: 10px 20px;
     font-size: 1.2rem;
@@ -205,7 +205,7 @@ h1, h2 {
         flex-direction: column;
         align-items: center;
         transition: all 0.3s ease-in-out;
-        transform: translateY(-100%); /* Initially hide the nav above the viewport */
+        transform: translateY(-200%); /* Initially hide the nav above the viewport */
     }
 
     nav.active {
@@ -278,12 +278,26 @@ h1, h2 {
 
 /* Meraki section styles */
 .meraki-block {
-    background-color: #9bd6a5; /* Light green background */
+    background-color: #A7D5A2; /* Light green background */
     padding: 80px 20px;
     text-align: center;
     position: relative;
     color: white;
+    overflow: hidden; 
+    padding: 12%;
 }
+
+.meraki-logo {
+    position: absolute; 
+    top: 50%; /* Center vertically */
+    left: 2%; /* Position the logo on the left */
+    transform: translateY(-50%); /* Only center vertically */
+    opacity: 0.2; 
+    width: 120px; /* Adjust the width of the logo */
+    height: auto; /* Let the height adjust automatically */
+    z-index: 0; /* Keep it behind the text */
+}
+
 
 /* Main heading styling */
 .meraki-block h1 {
@@ -306,6 +320,7 @@ h1, h2 {
 
 
 
+
 /* Soma Block Styles */
 .soma-block {
     position: relative;
@@ -314,7 +329,7 @@ h1, h2 {
     display: flex;
     justify-content: left;
     align-items: center;
-    padding: 0 180px;
+    padding: 12%;
 }
 
 .soma-image {
@@ -365,10 +380,10 @@ h1, h2 {
     padding: 12px 30px;
     font-size: 1.2rem;
     /* background-color: white; */
-    color: #9bd6a5;
+    color: #A7D5A2;
     text-decoration: none;
     border-radius: 5px;
-    border: 2px solid #9bd6a5 !important;
+    border: 2px solid #A7D5A2 !important;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     text-decoration: none !important;
 
