@@ -566,6 +566,123 @@ h3 {
 
 
 
+/* Our Team block */
+
+.team-block-image {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ensure it covers full viewport height */
+    max-height: 100vh; /* Prevent the block from exceeding the screen height */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0; /* Ensure no padding adds extra space */
+    margin: 0; /* Remove any margins that could create gaps */
+    overflow: hidden; /* Prevent content from overflowing and adding space */
+}
+
+.team-block-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Match the container's height exactly */
+    background: url('/images/stones.jpg') no-repeat center center/cover;
+    opacity: 0.4;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Specific adjustment to remove potential gaps caused by positioning */
+.team-text {
+    position: relative; /* Use relative to avoid influencing parent's height */
+    top: 0;
+    left: 10%;
+    max-width: 45%; 
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    line-height: 3.5;
+}
+
+
+/* Subtitle styles */
+.team-text p {
+    font-size: 1.2rem;
+}
+
+
+
+h3 {
+    margin-bottom: 7% !important;
+    font-size: 2.5rem !important;
+}
+
+
+
+@media (max-width: 700px) {
+    .team-text {
+        position: absolute;
+        top: 50%; /* Center vertically within the block */
+        left: 40%; /* Center the text horizontally */
+        transform: translate(-50%, -50%); /* Perfectly center text */
+        margin: 0; /* Remove any unintended margins */
+        max-width: 150% !important; /* Adjust width to fit smaller screens */
+        text-align: left; /* Center align the text */
+        font-size: 2.5rem; /* Adjust font size for readability */
+        z-index: 1; /* Ensure text is above the background */
+    }
+
+    .team-text p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+
+    .team-block-image {
+        position: relative;
+        width: 100%; /* Keep the width consistent */
+        min-height: 75vh; /* Set a responsive height */
+        max-height: 75vh; /* Constrain the height to avoid extra space */
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        overflow: hidden; /* Prevent overflow causing extra space */
+    }
+    
+    .team-block-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Ensure it matches the parent container */
+        height: 100%; /* Align with the block height */
+        background: url('/images/stones.jpg') no-repeat center center/cover !important;
+        opacity: 0.4; /* Background image transparency */
+        z-index: 0; /* Ensure it stays behind content */
+    }
+}
+
+@media (max-width: 500px) {
+    .team-text {
+        font-size: 2rem; /* Slightly reduce font size for small screens */
+        max-width: 95%; /* Adjust width for better fit */
+    }
+
+    .team-text p {
+        font-size: 1rem; /* Further adjust paragraph size for readability */
+        line-height: 2;
+    }
+
+    h3 {
+        font-size: 1.8rem !important;
+        margin: 0; /* Remove margins that could cause extra space */
+    }
+}
+
+
+
+
+
 
 
 
@@ -625,4 +742,34 @@ h3 {
 
 .social-icon img:hover {
     filter: opacity(1); /* Full opacity on hover */
+}
+
+
+@media (max-width: 500px) {
+    .site-footer {
+        padding: 10px 20px; 
+        flex-direction: column; 
+    }
+
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px; 
+    }
+
+    .footer-left {
+        flex-direction: column; 
+        gap: 10px;
+        text-align: center; 
+    }
+
+    .footer-right {
+        justify-content: center; 
+    }
+
+    .social-icon img {
+        width: 40px; 
+        height: 40px;
+        margin: 0; 
+    }
 }
