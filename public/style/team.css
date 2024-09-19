@@ -544,4 +544,24 @@ h1, h2 {
 
 
 
+.meraki-logo-left {
+    position: absolute; 
+    top: 20%; /* Center vertically */
+    left: 2%; /* Position the logo on the left */
+    transform: translateY(-50%); /* Only center vertically */
+    opacity: 0.2; 
+    width: 120px; /* Adjust the width of the logo */
+    height: auto; /* Let the height adjust automatically */
+    z-index: 0; /* Keep it behind the text */
+}
 
+.meraki-logo-right {
+    position: absolute; 
+    top: 70%; /* Center vertically */
+    right: 2%; /* Position the logo on the left */
+    transform: translateY(-50%); /* Only center vertically */
+    opacity: 0.2; 
+    width: 120px; /* Adjust the width of the logo */
+    height: auto; /* Let the height adjust automatically */
+    z-index: 0; /* Keep it behind the text */
+}
