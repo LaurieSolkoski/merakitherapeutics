@@ -321,134 +321,247 @@ h1, h2 {
 
 /* Description text styling */
 .meraki-block p {
-    font-size: 1.2rem;
-    max-width: 800px; /* Restrict width for better readability */
+    font-size: 1.1rem;
+    max-width: 1400px; /* Restrict width for better readability */
     margin: 0 auto; /* Center the paragraph */
-    line-height: 1.5;
+    line-height: 2;
     font-family: 'Merriweather', serif;
 
 }
 
 
+/* What makes Meraki different block*/
 
-
-/* Soma Block Styles */
-.soma-block {
+.different-block-image {
     position: relative;
-    /* background: url('/images/soma-background.jpg') no-repeat center center/cover;  */
-    height: 100vh; /* Fullscreen height */
+    width: 100%;
+    min-height: 100vh; /* Ensure it covers full viewport height */
+    max-height: 100vh; /* Prevent the block from exceeding the screen height */
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: center;
-    padding: 12%;
+    padding: 0; /* Ensure no padding adds extra space */
+    margin: 0; /* Remove any margins that could create gaps */
+    overflow: hidden; /* Prevent content from overflowing and adding space */
 }
 
-.soma-image {
+.different-block-image::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: url('/images/soma.jpg') no-repeat center center/cover;
-    opacity: 0.5; /* Semi-transparent background image */
-    z-index: 0; /* Ensure it's behind the content */
+    height: 100%; /* Match the container's height exactly */
+    background: url('/images/meraki-massage-bed.jpg') no-repeat center center/cover;
+    opacity: 0.4;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Specific adjustment to remove potential gaps caused by positioning */
+.different-text {
+    position: relative; /* Use relative to avoid influencing parent's height */
+    top: 0;
+    left: 10%;
+    max-width: 45%; 
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    line-height: 3.5;
 }
 
 
-/* Soma content */
-.soma-content {
-    max-width: 500px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 10px;
-    text-align: left;
-    border-radius: 10px;
-    z-index: 1 !important; /* Ensure content is above the background */
-    position: relative;
-}
-
-/* Title and text */
-.soma-content h2 {
-    font-size: 3rem !important;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.soma-content p {
-    font-size: 1.2rem !important;
-    color: #555;
-    margin-bottom: 40px;
-    line-height: 2.2 !important;
-    position: relative;
-    z-index: 1 !important; /* Ensures it is above the background */
-    opacity: 1 !important; /* Ensures the content is fully visible */
-
-
-}
-
-/* Learn More button */
-.btn-learn-more {
-    display: inline-block;
-    padding: 12px 30px;
+/* Subtitle styles */
+.different-text p {
     font-size: 1.2rem;
-    /* background-color: white; */
-    color: #A7D5A2;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid #A7D5A2 !important;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    text-decoration: none !important;
-
-}
-
-.btn-learn-more:hover {
-    background-color: #7ac495; /* Darker green on hover */
 }
 
 
 
+h3 {
+    margin-bottom: 7% !important;
+    font-size: 2.5rem !important;
+}
 
 
 
 @media (max-width: 700px) {
-    .soma-block {
-        flex-direction: column; /* Stack content vertically */
-        padding: 50px !important; /* Reduce padding for smaller screens */
-        height: auto; /* Adjust height to fit content */
+    .different-text {
+        position: absolute;
+        top: 50%; /* Center vertically within the block */
+        left: 40%; /* Center the text horizontally */
+        transform: translate(-50%, -50%); /* Perfectly center text */
+        margin: 0; /* Remove any unintended margins */
+        max-width: 150% !important; /* Adjust width to fit smaller screens */
+        text-align: left; /* Center align the text */
+        font-size: 2.5rem; /* Adjust font size for readability */
+        z-index: 1; /* Ensure text is above the background */
     }
 
-    .soma-image {
-        width: 100%;
-        height: 50vh; /* Reduce image height for smaller screens */
-        opacity: 0.5; /* Maintain the semi-transparent background */
+    .different-text p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
     }
 
-    .soma-content {
-        max-width: 100%; /* Make content take full width */
-        padding: 15px; /* Adjust padding for better readability */
-        border-radius: 8px; /* Slightly reduce the border-radius */
+    .different-block-image {
+        position: relative;
+        width: 100%; /* Keep the width consistent */
+        min-height: 75vh; /* Set a responsive height */
+        max-height: 75vh; /* Constrain the height to avoid extra space */
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        overflow: hidden; /* Prevent overflow causing extra space */
+    }
+    
+    .different-block-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Ensure it matches the parent container */
+        height: 100%; /* Align with the block height */
+        background: url('/images/meraki-massage-bed.jpg') no-repeat center center/cover !important;
+        opacity: 0.4; /* Background image transparency */
+        z-index: 0; /* Ensure it stays behind content */
+    }
+}
+
+@media (max-width: 500px) {
+    .different-text {
+        font-size: 2rem; /* Slightly reduce font size for small screens */
+        max-width: 95%; /* Adjust width for better fit */
     }
 
-    .soma-content h2 {
-        font-size: 2rem !important; /* Reduce font size for headings */
-        margin-bottom: 20px;
+    .different-text p {
+        font-size: 1rem; /* Further adjust paragraph size for readability */
+        line-height: 2;
     }
 
-    .soma-content p {
-        font-size: 1rem !important; /* Adjust paragraph font size */
-        margin-bottom: 20px;
-        line-height: 1.6 !important; /* Adjust line height for better readability */
-    }
-
-    .btn-learn-more {
-        padding: 10px 20px; /* Adjust button padding */
-        font-size: 1rem; /* Reduce button font size */
+    h3 {
+        font-size: 1.8rem !important;
+        margin: 0; /* Remove margins that could cause extra space */
     }
 }
 
 
 
 
+/* Our Commitment to you block */
 
+.commitment-block-image {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ensure it covers full viewport height */
+    max-height: 100vh; /* Prevent the block from exceeding the screen height */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0; /* Ensure no padding adds extra space */
+    margin: 0; /* Remove any margins that could create gaps */
+    overflow: hidden; /* Prevent content from overflowing and adding space */
+}
+
+.commitment-block-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Match the container's height exactly */
+    background: url('/images/sleeping.jpg') no-repeat center center/cover !important;
+    opacity: 0.4;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.commitment-text {
+    position: relative; /* Use relative to avoid influencing parent's height */
+    top: 0;
+    right: -50%; /* Change text position to the right */
+    max-width: 45%; 
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    line-height: 3.5;
+}
+
+/* Subtitle styles */
+.commitment-text p {
+    font-size: 1.2rem;
+}
+
+
+
+h3 {
+    margin-bottom: 7% !important;
+    font-size: 2.5rem !important;
+}
+
+
+@media (max-width: 700px) {
+    .commitment-text {
+        position: absolute;
+        top: 50%; /* Center vertically within the block */
+        right: 20%; /* Position closer to the right */
+        transform: translate(10%, -50%); /* Adjust to align right */
+        margin: 0; /* Remove any unintended margins */
+        max-width: 90% !important; /* Adjust width to fit smaller screens */
+        text-align: right; /* Align the text to the right */
+        font-size: 2.5rem; /* Adjust font size for readability */
+        z-index: 1; /* Ensure text is above the background */
+    }
+
+    .commitment-text p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+
+    .commitment-block-image {
+        position: relative;
+        width: 100%; /* Keep the width consistent */
+        min-height: 75vh; /* Set a responsive height */
+        max-height: 75vh; /* Constrain the height to avoid extra space */
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        overflow: hidden; /* Prevent overflow causing extra space */
+    }
+    
+    .commitment-block-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Ensure it matches the parent container */
+        height: 100%; /* Align with the block height */
+        background: url('/images/sleeping.jpg') no-repeat center center/cover;
+        opacity: 0.4; /* Background image transparency */
+        z-index: 0; /* Ensure it stays behind content */
+    }
+}
+
+@media (max-width: 500px) {
+    .commitment-text {
+        position: absolute;
+        top: 50%; /* Center vertically within the block */
+        left: 40%; /* Center the text horizontally */
+        transform: translate(-50%, -50%); /* Perfectly center text */
+        margin: 0; /* Remove any unintended margins */
+        max-width: 95% !important; /* Adjust width to fit smaller screens */
+        text-align: left; /* Center align the text */
+        font-size: 2rem; /* Adjust font size for readability */
+        z-index: 1; /* Ensure text is above the background */
+    }
+
+    .commitment-text p {
+        font-size: 1rem; /* Further adjust paragraph size for readability */
+        line-height: 2;
+    }
+
+    h3 {
+        font-size: 1.8rem !important;
+        margin: 0; /* Remove margins that could cause extra space */
+    }
+}
 
 
 
