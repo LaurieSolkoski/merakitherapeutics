@@ -131,17 +131,6 @@ h1, h2 {
     font-size: 120% !important;
 }
 
-/* 
-.fullscreen-gif {
-    position: relative;
-    width: 100%;
-    height: 110vh; 
-    background: url('/images/terms.jpg') no-repeat center center/cover; 
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center; 
-    opacity: 0.9;
-} */
 
 
 .fullscreen-gif {
@@ -431,118 +420,177 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 /* Meraki section styles */
 .meraki-block {
     background-color: #A7D5A2; /* Light green background */
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
-    color: white;
-    overflow: hidden; 
-    padding: 12%;
+    color: #ffffff; /* White text color */
+    padding: 40px 20px; /* Padding around the section */
+    position: relative; /* Position relative for correct layout of the logo */
 }
+
+.meraki-block h2, .meraki-block h4 {
+    font-weight: bold;
+    margin-bottom: 30px;
+
+}
+
+
+.meraki-block h4 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 2rem;
+}
+
+.meraki-block ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    line-height: 3;
+}
+
+
+/* Custom styles for the right section block */
+.right-section h4,
+.right-section ul {
+    margin-left: 30% !important;
+}
+
+.right-section h4 {
+margin-top: 10% !important;
+}
+
+.right-section .btn-book-now {
+    margin-left: 10% !important;
+
+}
+
+.right-section ul {
+    list-style: none !important; /* Ensure list items are unstyled */
+}
+
+.custom-book-now {
+    background-color: white !important; /* White background */
+    color: #A7D5A2 !important; /* Green text color */
+    border: 2px solid #A7D5A2; /* Green solid border */
+    border-radius: 50px; /* Optional: rounded corners */
+    padding: 12px 0px !important; /* Padding for spacing inside button */
+    text-decoration: none; /* No underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    width: 25% !important;
+    margin-left: 65%;
+}
+
+.custom-book-now:hover {
+    background-color: #A7D5A2 !important; /* Green background on hover */
+    color: white !important; /* White text color on hover */
+    border: 2px solid white !important; /* White border on hover */
+}
+
+
+
 
 .meraki-logo {
-    position: absolute; 
-    top: 50%; /* Center vertically */
-    left: 2%; /* Position the logo on the left */
-    transform: translateY(-50%); /* Only center vertically */
-    opacity: 0.2; 
-    width: 120px; /* Adjust the width of the logo */
-    height: auto; /* Let the height adjust automatically */
-    z-index: 0; /* Keep it behind the text */
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    width: 20%;
+    height: auto;
+    z-index: 0; /* Keep behind other content */
 }
 
-
-/* Main heading styling */
-.meraki-block h1 {
-    font-size: 3rem !important; /* Large title font */
-    font-weight: bold !important;
-    margin-bottom: 20px !important;
-    color: white !important;
-    font-family: 'Merriweather', serif;
+.btn-book-now {
+    background-color: #ffffff;
+    color: #A7D5A2;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #A7D5A2;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Description text styling */
-.meraki-block p {
-    font-size: 1.2rem;
-    max-width: 800px; /* Restrict width for better readability */
-    margin: 0 auto; /* Center the paragraph */
-    line-height: 1.5;
-    font-family: 'Merriweather', serif;
-
+.btn-book-now:hover {
+    background-color: #A7D5A2;
+    color: #ffffff;
 }
 
 
 
 
-/* Soma Block Styles */
-.soma-block {
-    position: relative;
-    /* background: url('/images/soma-background.jpg') no-repeat center center/cover;  */
-    height: 100vh; /* Fullscreen height */
+/* 3 BLOCKS */
+
+.massage-section {
     display: flex;
-    justify-content: left;
-    align-items: center;
-    padding: 12%;
+    flex-wrap: wrap;
+    position: relative;
+    background-image: url('/images/lavander.png'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    color: #231F20;
+    padding: 0;
+    opacity: 0.6;
 }
 
-.soma-image {
+.massage-section::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/images/soma.jpg') no-repeat center center/cover;
-    opacity: 0.5; /* Semi-transparent background image */
-    z-index: 0; /* Ensure it's behind the content */
+    background: rgba(255, 255, 255, 0.6); /* Adjust opacity and color as needed */
+    z-index: 1;
 }
 
+.massage-block {
+    flex: 1;
+    min-width: 33.33%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
 
-/* Soma content */
-.soma-content {
-    max-width: 500px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 10px;
+.massage-block:hover {
+    background-color: rgba(167, 213, 162, 0.5); /* #A7D5A2 with 0.8 opacity */
+}
+
+.massage-block h4, .massage-block p {
+    margin: 0 0 10px;
     text-align: left;
-    border-radius: 10px;
-    z-index: 1 !important; /* Ensure content is above the background */
-    position: relative;
 }
 
-/* Title and text */
-.soma-content h2 {
-    font-size: 3rem !important;
-    margin-bottom: 30px;
-    color: #333;
+.massage-block h4 {
+    font-size: 2.5rem;
+    margin-top: 12%;
 }
 
-.soma-content p {
-    font-size: 1.2rem !important;
-    color: #555;
-    margin-bottom: 40px;
-    line-height: 2.2 !important;
-    position: relative;
-    z-index: 1 !important; /* Ensures it is above the background */
-    opacity: 1 !important; /* Ensures the content is fully visible */
-
-
+.massage-block p {
+    line-height: 3;
 }
 
-/* Learn More button */
+
 .btn-learn-more {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    /* background-color: white; */
-    color: #A7D5A2;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid #A7D5A2 !important;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    text-decoration: none !important;
-
+    background-color: white !important; /* White background */
+    color: #A7D5A2 !important; /* Green text color */
+    border: 2px solid #A7D5A2 !important; /* Green solid border */
+    border-radius: 50px; /* Optional: rounded corners */
+    padding: 12px 0px !important; /* Padding for spacing inside button */
+    text-decoration: none; /* No underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    width: 70% !important;
+    align-self: flex-start;
+    margin-top: 10%;
 }
+
 
 .btn-learn-more:hover {
-    background-color: #7ac495; /* Darker green on hover */
+    background-color: #A7D5A2 !important; /* Green background on hover */
+    color: white !important; /* White text color on hover */
+    border: 2px solid white !important; /* White border on hover */
 }
 
 
@@ -550,39 +598,9 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
-@media (max-width: 700px) {
-    .soma-block {
-        flex-direction: column; /* Stack content vertically */
-        padding: 50px !important; /* Reduce padding for smaller screens */
-        height: auto; /* Adjust height to fit content */
-    }
-
-    .soma-image {
-        width: 100%;
-        height: 50vh; /* Reduce image height for smaller screens */
-        opacity: 0.5; /* Maintain the semi-transparent background */
-    }
-
-    .soma-content {
-        max-width: 100%; /* Make content take full width */
-        padding: 15px; /* Adjust padding for better readability */
-        border-radius: 8px; /* Slightly reduce the border-radius */
-    }
-
-    .soma-content h2 {
-        font-size: 2rem !important; /* Reduce font size for headings */
-        margin-bottom: 20px;
-    }
-
-    .soma-content p {
-        font-size: 1rem !important; /* Adjust paragraph font size */
-        margin-bottom: 20px;
-        line-height: 1.6 !important; /* Adjust line height for better readability */
-    }
-
-    .btn-learn-more {
-        padding: 10px 20px; /* Adjust button padding */
-        font-size: 1rem; /* Reduce button font size */
+@media (max-width: 1000px) {
+    .massage-block {
+        min-width: 100%;
     }
 }
 
@@ -590,19 +608,7 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* FOOTER */
 
 
 .site-footer {
