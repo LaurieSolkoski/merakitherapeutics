@@ -161,7 +161,7 @@ h1, h2 {
     width: 100%;
     height: 100%;
     background: url('/images/buddha-header.jpg') no-repeat center center/cover;
-    opacity: 0.5; /* Set the opacity of the background image */
+    opacity: 0.4; /* Set the opacity of the background image */
     z-index: 0; /* Ensure it is behind all content */
 }
 
@@ -293,8 +293,10 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
     }
 
     .hamburger-logo img {
-        max-width: 100%; /* Confine the image within the parent container */
+        max-width: 700%; /* Confine the image within the parent container */
         height: auto; /* Maintain the image aspect ratio */
+        margin-top: 100%;
+        margin-left: 50%;
         display: block; /* Prevent any inline spacing issues */
         object-fit: contain; /* Ensure the image scales correctly within the bounds */
     }
