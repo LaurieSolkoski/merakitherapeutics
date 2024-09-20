@@ -1,0 +1,685 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.691) !important;
+    overflow-y: auto;
+    height: 100%;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.691) !important;
+    color: #e6e6faa4 !important;
+    /* padding: 15px 0; */
+    text-align: center;
+}
+
+.meraki-logo-right {
+    position: absolute; 
+    top: 80%; /* Center vertically */
+    right: 0.1%; /* Position the logo on the left */
+    transform: translateY(-50%); /* Only center vertically */
+    opacity: 0.3; 
+    width: 120px; /* Adjust the width of the logo */
+    height: auto; /* Let the height adjust automatically */
+    z-index: 0; /* Keep it behind the text */
+}
+
+
+.nav-text {
+    position:relative;
+    text-align: center;
+    color: #231F20;
+    /* color: white !important; */
+    font-size: 1rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    line-height: 1;
+}
+
+nav {
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 340px; 
+    height: 100%; 
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    z-index: 1000; /* Higher than the fullscreen GIF */
+
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Frosted glass for Safari */
+    border-right: 1px solid rgba(255, 255, 255, 0.311); /* Light border for effect */
+    /* padding-top: 50px; */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 1;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+
+    width: 100%; /* Ensure it stretches to the width of the navbar */
+    margin-top: 10%;
+}
+
+nav ul li {
+    /* width: 100%;*/
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+nav ul li a {
+    display: inline-block;
+    /* color: #A7D5A2; */
+    color: #231F20;
+    text-decoration: none;
+    font-size: 1.2rem;
+    /* padding: 5px; */
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+    /* width: 100%; */
+    border-radius: 50px; 
+    /* font-weight: bold !important; */
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #a8c5b4;
+    background-color: rgba(230, 230, 250, 0.3); 
+    box-shadow: 0 0 10px 5px rgba(230, 230, 250, 0.5);
+    border-radius: 50px; 
+}
+
+nav .logo img {
+    width: 280px;
+    height: 140px;
+    margin-bottom: 15px;
+    margin-top: 10%;
+    margin-right:1.5%;
+}
+
+.book-now {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-book-now {
+    display: inline-block;
+    background-color: #A7D5A2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 80% !important;
+
+}
+
+.btn-book-now:hover {
+    background-color: #7ac495; /* Darken on hover */
+}
+
+
+
+h1, h2 {
+    color: #231F20;
+    font-size: 120% !important;
+}
+
+/* 
+.fullscreen-gif {
+    position: relative;
+    width: 100%;
+    height: 110vh; 
+    background: url('/images/terms.jpg') no-repeat center center/cover; 
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    opacity: 0.9;
+} */
+
+
+.fullscreen-gif {
+    position: relative;
+    width: 100%;
+    height: 110vh; /* Fullscreen height */
+    display: flex;
+    justify-content: flex-start; /* Align items on the left */
+    align-items: center; /* Vertically center */
+}
+
+.fullscreen-gif::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/buddha-header.jpg') no-repeat center center/cover;
+    opacity: 0.5; /* Set the opacity of the background image */
+    z-index: 0; /* Ensure it is behind all content */
+}
+
+nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
+    position: relative;
+    z-index: 1; /* Ensure content stays above the background overlay */
+    opacity: 1; /* Keep all nav elements fully visible */
+}
+
+
+/* Base styles for the overlay text */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    right: 5%; /* Right-align the text */
+    transform: translateY(-50%);
+    text-align: right;
+    color: #231F20;
+    font-size: 3rem;
+    max-width: 60%; /* Ensure the text doesn't overflow */
+}
+
+/* Subtitle styles */
+.overlay-text p {
+    font-size: 1.6rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .overlay-text {
+        right: 10%; /* Move the text closer to the center on medium screens */
+        max-width: 50%;
+    }
+}
+
+
+@media (max-width: 990px) {
+    .overlay-text {
+        right: 15%; /* Move the text further to the center */
+        max-width: 40%;
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .overlay-text p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+}
+
+
+
+.hamburger-menu {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px; /* Slightly larger to match the visual style */
+    height: 50px; /* Make it a square shape */
+    border: 2px solid #A7D5A2; /* Green solid border */
+    border-radius: 4px; /* Rounded corners similar to the image */
+    box-sizing: border-box;
+    padding: 5px; /* Add some padding inside the border */
+    opacity: 0.8;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px; /* Adjust the line thickness */
+    background-color: #4b4747; /* Line color */
+    opacity: 0.8;
+    border-radius: 2px; /* Slightly round the lines */
+}
+
+
+
+.top-bar, .top-bar-book-now, .top-bar-nav-text, .hamburger-menu {
+    display: none;
+}
+
+
+
+.close-menu {
+    display: flex;
+    position: absolute;
+    top: 6.5%;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Size of the square */
+    height: 50px;
+    border: 2px solid #A7D5A2; /* Green border */
+    background-color: white; /* White background */
+    border-radius: 4px; /* Slightly rounded corners */
+    box-sizing: border-box;
+}
+
+.close-icon {
+    font-size: 24px; /* Font size of the '×' */
+    color: #4b4747; /* Color of the close icon */
+}
+
+.hamburger-logo {
+    display: none;
+}
+
+
+
+/* where hamburger starts */
+@media (max-width: 680px) {
+    .hamburger-logo {
+        display: flex; /* Display as flex to manage positioning */
+        justify-content: center; /* Center the logo horizontally */
+        align-items: center; /* Center the logo vertically */
+        max-width: 40px; /* Confine the logo to a very small size */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0; /* Remove extra margins */
+        position: absolute; /* Position it within its container */
+        top: 10px; /* Adjust the top position to keep it visible */
+        left: 10px; /* Adjust the left position to keep it visible */
+        z-index: 1;
+        overflow: visible; /* Ensure the image itself isn't hidden */
+        box-sizing: border-box; /* Ensure padding and border are calculated inside the size */
+    }
+
+    .hamburger-logo img {
+        max-width: 100%; /* Confine the image within the parent container */
+        height: auto; /* Maintain the image aspect ratio */
+        display: block; /* Prevent any inline spacing issues */
+        object-fit: contain; /* Ensure the image scales correctly within the bounds */
+    }
+
+    .top-bar {
+        background-color: #231F20;
+        padding: 10px 20px;
+        width: 100%;
+        z-index: 1002; /* Ensure it stays above other elements */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
+    }
+
+    .top-bar-book-now {
+        display: block; /* Ensure this class is shown only within .top-bar */
+    }
+
+    .top-bar-nav-text {
+        display: block; /* Ensure this class is shown only within .top-bar */
+    }
+
+    .top-bar-book-now{
+        background-color: white !important; /* Set background color to white */
+        color: #A7D5A2 !important; /* Set text color to green */
+        padding: 1.5px 14px; /* Made wider */
+        font-size: 1rem;
+        /* border-radius: 50px; */
+        border: 2px solid #A7D5A2; /* Green solid border */
+        text-decoration: none;
+        font-weight: bold; /* Optional: make text bold */
+        width:24% !important;
+        transition: all 0.3s ease; /* Smooth transition on hover */
+    }
+    
+    .top-bar-book-now:hover {
+        background-color: #A7D5A2; /* Hover effect to change the background to green */
+        color: white !important; /* Change text color to white on hover */
+    }
+    
+    .hamburger-menu {
+        top: 60px; /* Adjust to ensure it is below the top-bar */
+        z-index: 1001;
+    }
+
+    header {
+        padding-top: 50px; /* Adjust padding to account for the fixed top-bar */
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-200%); /* Initially hide the nav above the viewport */
+    }
+
+    nav.active {
+        transform: translateY(0); /* Slide the nav down when active */
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav .logo img {
+        width: 320px;
+        height: 150px;
+        margin-bottom: 15px;
+        margin-top: 5%;
+        margin-right: 10%;
+    }
+
+    nav ul {
+        padding: 20px;
+        list-style: none;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 15px;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+        color: #231F20;
+        text-decoration: none;
+    }
+
+    .overlay-text {
+        transform: translate(0, -50%);
+        text-align: center !important;
+        max-width: 100%; /* Allow the text more space on small screens */
+        font-size: 1.8rem;
+        justify-content: center;
+        left: 18%;
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    .overlay-text {
+        left: 18%;
+        transform: translate(0, -50%);
+        text-align: center !important;
+        justify-content: center !important;
+        max-width: 90%; /* Allow the text more space on small screens */
+        font-size: 1.8rem;
+    }
+
+    .overlay-text p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* Meraki section styles */
+.meraki-block {
+    background-color: #A7D5A2; /* Light green background */
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    color: white;
+    overflow: hidden; 
+    padding: 12%;
+}
+
+.meraki-logo {
+    position: absolute; 
+    top: 50%; /* Center vertically */
+    left: 2%; /* Position the logo on the left */
+    transform: translateY(-50%); /* Only center vertically */
+    opacity: 0.2; 
+    width: 120px; /* Adjust the width of the logo */
+    height: auto; /* Let the height adjust automatically */
+    z-index: 0; /* Keep it behind the text */
+}
+
+
+/* Main heading styling */
+.meraki-block h1 {
+    font-size: 3rem !important; /* Large title font */
+    font-weight: bold !important;
+    margin-bottom: 20px !important;
+    color: white !important;
+    font-family: 'Merriweather', serif;
+}
+
+/* Description text styling */
+.meraki-block p {
+    font-size: 1.2rem;
+    max-width: 800px; /* Restrict width for better readability */
+    margin: 0 auto; /* Center the paragraph */
+    line-height: 1.5;
+    font-family: 'Merriweather', serif;
+
+}
+
+
+
+
+/* Soma Block Styles */
+.soma-block {
+    position: relative;
+    /* background: url('/images/soma-background.jpg') no-repeat center center/cover;  */
+    height: 100vh; /* Fullscreen height */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 12%;
+}
+
+.soma-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/soma.jpg') no-repeat center center/cover;
+    opacity: 0.5; /* Semi-transparent background image */
+    z-index: 0; /* Ensure it's behind the content */
+}
+
+
+/* Soma content */
+.soma-content {
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px;
+    z-index: 1 !important; /* Ensure content is above the background */
+    position: relative;
+}
+
+/* Title and text */
+.soma-content h2 {
+    font-size: 3rem !important;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.soma-content p {
+    font-size: 1.2rem !important;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 2.2 !important;
+    position: relative;
+    z-index: 1 !important; /* Ensures it is above the background */
+    opacity: 1 !important; /* Ensures the content is fully visible */
+
+
+}
+
+/* Learn More button */
+.btn-learn-more {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    /* background-color: white; */
+    color: #A7D5A2;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #A7D5A2 !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none !important;
+
+}
+
+.btn-learn-more:hover {
+    background-color: #7ac495; /* Darker green on hover */
+}
+
+
+
+
+
+
+@media (max-width: 700px) {
+    .soma-block {
+        flex-direction: column; /* Stack content vertically */
+        padding: 50px !important; /* Reduce padding for smaller screens */
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .soma-image {
+        width: 100%;
+        height: 50vh; /* Reduce image height for smaller screens */
+        opacity: 0.5; /* Maintain the semi-transparent background */
+    }
+
+    .soma-content {
+        max-width: 100%; /* Make content take full width */
+        padding: 15px; /* Adjust padding for better readability */
+        border-radius: 8px; /* Slightly reduce the border-radius */
+    }
+
+    .soma-content h2 {
+        font-size: 2rem !important; /* Reduce font size for headings */
+        margin-bottom: 20px;
+    }
+
+    .soma-content p {
+        font-size: 1rem !important; /* Adjust paragraph font size */
+        margin-bottom: 20px;
+        line-height: 1.6 !important; /* Adjust line height for better readability */
+    }
+
+    .btn-learn-more {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 1rem; /* Reduce button font size */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.site-footer {
+    background-color: #ffffff; /* Footer background color */
+    padding: 20px 40px; /* Padding for the footer */
+    border-top: 1px solid #e0e0e0; /* Subtle border at the top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between left and right content */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Center content with a max-width */
+}
+
+.footer-left {
+    display: flex;
+    gap: 20px; /* Space between footer links */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    color: #333; /* Text color */
+}
+
+.footer-left a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+    color: #7ac495; /* Hover color for links */
+}
+
+.footer-right {
+    display: flex;
+    gap: 10px; /* Space between icons */
+}
+
+.social-icon img {
+    width: 50px; /* Icon size */
+    height: 50px;
+    transition: filter 0.3s ease;
+    margin: 20%;
+}
+
+.social-icon img:hover {
+    filter: opacity(1); /* Full opacity on hover */
+}
+
+
+
+@media (max-width: 500px) {
+    .site-footer {
+        padding: 10px 20px; 
+        flex-direction: column; 
+    }
+
+    .footer-content {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px; 
+    }
+
+    .footer-left {
+        flex-direction: column; 
+        gap: 10px;
+        text-align: center; 
+    }
+
+    .footer-right {
+        justify-content: center; 
+    }
+
+    .social-icon img {
+        width: 40px; 
+        height: 40px;
+        margin: 0; 
+    }
+}
