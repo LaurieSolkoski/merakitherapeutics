@@ -578,6 +578,70 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
+/* Contact Form */
+.contact-form {
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.form-group label span {
+    color: #aaa;
+    font-size: 0.75rem;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    border-color: #a8c5b4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}
+
+.submit-button {
+    background-color: transparent;
+    border: 2px solid #a8c5b4 !important; /* Solid border with the specified color */
+    padding: 10px 30px;
+    font-size: 1rem;
+    color: #a8c5b4;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #a8c5b4;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+
 
 
 
