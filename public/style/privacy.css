@@ -426,174 +426,22 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
-/* Meraki section styles */
-.meraki-block {
-    background-color: #A7D5A2; /* Light green background */
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
-    color: white;
-    overflow: hidden; 
-    padding: 12%;
+
+
+
+.privacy-policy-section {
+margin-left: 15%;
+margin-right: 15%;
+margin-top: 5%;
 }
 
-.meraki-logo {
-    position: absolute; 
-    top: 50%; /* Center vertically */
-    left: 2%; /* Position the logo on the left */
-    transform: translateY(-50%); /* Only center vertically */
-    opacity: 0.2; 
-    width: 120px; /* Adjust the width of the logo */
-    height: auto; /* Let the height adjust automatically */
-    z-index: 0; /* Keep it behind the text */
+.privacy-policy-section p {
+    line-height: 3; /* Set line height of paragraphs to 2 */
 }
 
-
-/* Main heading styling */
-.meraki-block h1 {
-    font-size: 3rem !important; /* Large title font */
-    font-weight: bold !important;
-    margin-bottom: 20px !important;
-    color: white !important;
-    font-family: 'Merriweather', serif;
+.privacy-policy-section ul {
+    padding-left: 20px; /* Optional: Adjust left padding for list alignment */
 }
-
-/* Description text styling */
-.meraki-block p {
-    font-size: 1.2rem;
-    max-width: 800px; /* Restrict width for better readability */
-    margin: 0 auto; /* Center the paragraph */
-    line-height: 1.5;
-    font-family: 'Merriweather', serif;
-
-}
-
-
-
-
-/* Soma Block Styles */
-.soma-block {
-    position: relative;
-    /* background: url('/images/soma-background.jpg') no-repeat center center/cover;  */
-    height: 100vh; /* Fullscreen height */
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding: 12%;
-}
-
-.soma-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('/images/soma.jpg') no-repeat center center/cover;
-    opacity: 0.5; /* Semi-transparent background image */
-    z-index: 0; /* Ensure it's behind the content */
-}
-
-
-/* Soma content */
-.soma-content {
-    max-width: 500px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 10px;
-    text-align: left;
-    border-radius: 10px;
-    z-index: 1 !important; /* Ensure content is above the background */
-    position: relative;
-}
-
-/* Title and text */
-.soma-content h2 {
-    font-size: 3rem !important;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.soma-content p {
-    font-size: 1.2rem !important;
-    color: #555;
-    margin-bottom: 40px;
-    line-height: 2.2 !important;
-    position: relative;
-    z-index: 1 !important; /* Ensures it is above the background */
-    opacity: 1 !important; /* Ensures the content is fully visible */
-
-
-}
-
-/* Learn More button */
-.btn-learn-more {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    /* background-color: white; */
-    color: #A7D5A2;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid #A7D5A2 !important;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    text-decoration: none !important;
-
-}
-
-.btn-learn-more:hover {
-    background-color: #7ac495; /* Darker green on hover */
-}
-
-
-
-
-
-
-@media (max-width: 700px) {
-    .soma-block {
-        flex-direction: column; /* Stack content vertically */
-        padding: 50px !important; /* Reduce padding for smaller screens */
-        height: auto; /* Adjust height to fit content */
-    }
-
-    .soma-image {
-        width: 100%;
-        height: 50vh; /* Reduce image height for smaller screens */
-        opacity: 0.5; /* Maintain the semi-transparent background */
-    }
-
-    .soma-content {
-        max-width: 100%; /* Make content take full width */
-        padding: 15px; /* Adjust padding for better readability */
-        border-radius: 8px; /* Slightly reduce the border-radius */
-    }
-
-    .soma-content h2 {
-        font-size: 2rem !important; /* Reduce font size for headings */
-        margin-bottom: 20px;
-    }
-
-    .soma-content p {
-        font-size: 1rem !important; /* Adjust paragraph font size */
-        margin-bottom: 20px;
-        line-height: 1.6 !important; /* Adjust line height for better readability */
-    }
-
-    .btn-learn-more {
-        padding: 10px 20px; /* Adjust button padding */
-        font-size: 1rem; /* Reduce button font size */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
