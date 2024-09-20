@@ -18,7 +18,7 @@ header {
 .nav-text {
     position:relative;
     text-align: center;
-    color: white !important;
+    color: #231F20;
     font-size: 1rem;
     margin-top: 10%;
     margin-bottom: 10%;
@@ -62,7 +62,7 @@ nav ul li {
 
 nav ul li a {
     display: inline-block;
-    color: #A7D5A2;
+    color: #231F20;
     text-decoration: none;
     font-size: 1.2rem;
     /* padding: 5px; */
@@ -94,7 +94,7 @@ nav .logo img {
     top: 80%; /* Center vertically */
     right: 0.1%; /* Position the logo on the left */
     transform: translateY(-50%); /* Only center vertically */
-    opacity: 0.3; 
+    opacity: 0.1 !important; 
     width: 120px; /* Adjust the width of the logo */
     height: auto; /* Let the height adjust automatically */
     z-index: 0; /* Keep it behind the text */
@@ -126,7 +126,7 @@ nav .logo img {
 
 h1, h2 {
     /* color: #9bd6a5; */
-    color: white;
+    color: #231F20;
     font-size: 120% !important;
 }
 
@@ -135,11 +135,27 @@ h1, h2 {
     position: relative;
     width: 100%;
     height: 110vh; /* Fullscreen height */
-    background: url('/images/optimized.gif') no-repeat center center/cover; /* Path to your GIF */
     display: flex;
     justify-content: flex-start; /* Align items on the left */
     align-items: center; /* Vertically center */
+}
 
+.fullscreen-gif::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/lavander_soap.jpg') no-repeat center center/cover;
+    opacity: 0.4; /* Set the opacity of the background image */
+    z-index: 0; /* Ensure it is behind all content */
+}
+
+nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
+    position: relative;
+    z-index: 1; /* Ensure content stays above the background overlay */
+    opacity: 1; /* Keep all nav elements fully visible */
 }
 
 
@@ -150,7 +166,7 @@ h1, h2 {
     right: 5%; /* Right-align the text */
     transform: translateY(-50%);
     text-align: right;
-    color: white;
+    color: #231F20;
     font-size: 3rem;
     max-width: 60%; /* Ensure the text doesn't overflow */
 }
@@ -159,6 +175,7 @@ h1, h2 {
 .overlay-text p {
     font-size: 1.6rem;
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
