@@ -14,6 +14,9 @@ header {
     text-align: center;
 }
 
+.overlay-text p {
+    color:#231F20;
+}
 
 .nav-text {
     position:relative;
@@ -113,7 +116,7 @@ nav .logo img {
 
 
 h1, h2 {
-    color: #9bd6a5;
+    color: #231F20 !important;
     font-size: 120% !important;
 }
 
@@ -122,7 +125,7 @@ h1, h2 {
     position: relative;
     width: 100%;
     height: 110vh; /* Fullscreen height */
-    background: url('/images/optimized.gif') no-repeat center center/cover; /* Path to your GIF */
+    /* background: url('/images/optimized.gif') no-repeat center center/cover;  */
     display: flex;
     justify-content: flex-start; /* Align items on the left */
     align-items: center; /* Vertically center */
@@ -318,230 +321,6 @@ h1, h2 {
 }
 
 
-.june-block {
-    display: flex; /* Arrange content and image side by side */
-    align-items: center;
-    background-color: #f5f5f536 !important; /* Light background similar to the example */
-    padding: 100px;
-    position: relative;
-    overflow: hidden;
-
-}
-
-.june-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 120%;
-    height: 130%;
-    background: url('/images/june.jpg') no-repeat center center/cover;
-    opacity: 0.6; /* Semi-transparent background image */
-    z-index: 0; /* Ensure it's behind the content */
-}
-
-.june-content {
-    flex: 1; /* Content takes up the other part of the width */
-    max-width: 500px;
-    background: white;
-    padding: 20px 40px;
-    margin-right: 20px; /* Adds spacing between content and image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    z-index: 1; /* Keep content above the image */
-    border-radius: 45px;
-}
-
-.june-content h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333; /* Dark text for contrast */
-}
-
-.june-content h3 {
-    font-size: 1.2rem;
-    color: #e74c3c; /* Red color for title */
-    margin-bottom: 20px;
-}
-
-.june-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-
-@media (max-width: 1000px) {
-    .june-block {
-        flex-direction: column; /* Stack image on top of the content */
-        padding: 0; /* Remove padding to align elements properly */
-    }
-
-    .june-image {
-        width: 100%; /* Ensure the image takes the full width */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Remove extra spacing */
-        z-index: 1; /* Ensure the image stays visible */
-        opacity: 1 !important;
-    }
-
-    .june-content {
-        width: 120% !important; /* Make the content also take the full width */
-        max-width: 120% !important;/* Remove max-width restriction */
-        margin-top: 290px !important;
-        padding: 15% !important;
-        border-radius: 0 !important;
-        position: relative;
-    }
-}
-
-
-@media (max-width: 600px) {
-    .june-content {
-        width: 100%; /* Make the content also take the full width */
-        max-width: 140%; /* Remove max-width restriction */
-        margin-top: 150px ;
-        z-index: 2; /* Keep content on top of the image if needed */
-        border-radius: 0 !important;
-        position: relative;
-    }
-}
-
-@media (max-width: 400px) {
-    .june-image {
-        width: 100%; /* Ensure the image takes the full width */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Remove extra spacing */
-        z-index: 1; /* Ensure the image stays visible */
-        opacity: 1 !important;
-    }
-    .june-content {
-        width: 100%; /* Make the content also take the full width */
-        max-width: 140%; /* Remove max-width restriction */
-        margin-top: 100px !important;
-        z-index: 2; /* Keep content on top of the image if needed */
-        border-radius: 0 !important;
-        position: relative;
-    }
-}
-
-
-
-.essa-block {
-    position: relative; /* Establishes positioning context */
-    display: flex; /* Flex layout for content and image */
-    align-items: center;
-    justify-content: flex-end; /* Pushes the content to the right */
-    background-color: #f5f5f536 !important; /* Light background similar to the example */
-    padding: 100px; 
-    overflow: hidden;
-    min-height: 500px; /* Ensure enough height for the section */
-}
-
-.essa-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 120%;
-    height: 130%;
-    background: url('/images/essa.jpg') no-repeat center center/cover;
-    opacity: 0.6; /* Semi-transparent background image */
-    z-index: 0; /* Ensure it's behind the content */
-}
-
-
-.essa-content {
-    position: relative;
-    z-index: 1; /* Keep content above the image */
-    max-width: 500px;
-    background: white;
-    padding: 20px 40px;
-    margin-right: 40px; /* Adjusts spacing from the right edge */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    border-radius: 45px;
-    text-align: left; /* Align text within the content box */
-}
-
-.essa-content h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333; /* Dark text for contrast */
-}
-
-.essa-content h3 {
-    font-size: 1.2rem;
-    color: #e74c3c; /* Red color for title */
-    margin-bottom: 20px;
-}
-
-.essa-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-
-
-@media (max-width: 1000px) {
-    .essa-block {
-        flex-direction: column; /* Stack image on top of the content */
-        padding: 0; /* Remove padding to align elements properly */
-    }
-
-    .essa-image {
-        width: 100%; /* Ensure the image takes the full width */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Remove extra spacing */
-        z-index: 1; /* Ensure the image stays visible */
-        opacity: 1 !important;
-    }
-
-    .essa-content {
-        width: 120% !important; /* Make the content also take the full width */
-        max-width: 120% !important;/* Remove max-width restriction */
-        margin-top: 290px !important;
-        padding: 15% !important;
-        border-radius: 0 !important;
-        position: relative;
-    }
-}
-
-
-@media (max-width: 600px) {
-    .essa-content {
-        width: 100%; /* Make the content also take the full width */
-        max-width: 140%; /* Remove max-width restriction */
-        margin-top: 150px ;
-        z-index: 2; /* Keep content on top of the image if needed */
-        border-radius: 0 !important;
-        position: relative;
-    }
-}
-
-@media (max-width: 400px) {
-    .essa-image {
-        width: 100%; /* Ensure the image takes the full width */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 0; /* Remove extra spacing */
-        z-index: 1; /* Ensure the image stays visible */
-        opacity: 1 !important;
-    }
-    .essa-content {
-        width: 100%; /* Make the content also take the full width */
-        max-width: 140%; /* Remove max-width restriction */
-        margin-top: 100px !important;
-        z-index: 2; /* Keep content on top of the image if needed */
-        border-radius: 0 !important;
-        position: relative;
-    }
-}
-
-
-
-
-
 
 .meraki-logo-left {
     position: absolute; 
@@ -568,6 +347,164 @@ h1, h2 {
 
 
 
+
+
+/* JUNE */
+
+.june-yee-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.june-yee-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/june.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.june-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.june-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.june-text h2, .june-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.june-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .june-yee-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .june-yee-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .june-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
+
+
+
+
+
+
+
+
+/* ESSA */
+
+.essa-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.essa-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/essa.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.essa-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.essa-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.essa-text h2, .essa-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.essa-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .essa-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .essa-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .essa-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
 
 
 
