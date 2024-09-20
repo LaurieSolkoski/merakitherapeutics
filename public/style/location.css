@@ -256,7 +256,7 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 /* where hamburger starts */
-@media (max-width: 750px) {
+@media (max-width: 767px) {
     nav {
         display: none ; 
         position: absolute;
