@@ -219,6 +219,7 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
     right: 20px;
     z-index: 1001;
     cursor: pointer;
+    background-color: white;
     flex-direction: column;
     justify-content: space-between;
     width: 50px; /* Slightly larger to match the visual style */
@@ -227,7 +228,7 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
     border-radius: 4px; /* Rounded corners similar to the image */
     box-sizing: border-box;
     padding: 5px; /* Add some padding inside the border */
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .hamburger-menu span {

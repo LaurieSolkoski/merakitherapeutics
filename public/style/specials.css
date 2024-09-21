@@ -1,5 +1,5 @@
 body, html {
-    font-family: Arial, sans-serif;
+    font-family: 'Garamond', serif !important;
     margin: 0;
     padding: 0;
     background-color: rgba(255, 255, 255, 0.691) !important;
@@ -8,11 +8,39 @@ body, html {
     overflow-x: hidden;
 }
 
+/* Ensure Garamond is applied to all overlay text */
+.overlay-text,
+.overlay-text h1,
+.overlay-text h2,
+h4 {
+    font-family: 'Garamond', serif !important;
+}
+
+
+
+/* Ensure Garamond is applied to all overlay text */
+
+.overlay-text p, li, .nav-text, p{
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+
 header {
     background-color: rgba(255, 255, 255, 0.691) !important;
     color: #e6e6faa4 !important;
     /* padding: 15px 0; */
     text-align: center;
+}
+
+.meraki-logo-right {
+    position: absolute; 
+    top: 80%; /* Center vertically */
+    right: 0.1%; /* Position the logo on the left */
+    transform: translateY(-50%); /* Only center vertically */
+    opacity: 0.3; 
+    width: 120px; /* Adjust the width of the logo */
+    height: auto; /* Let the height adjust automatically */
+    z-index: 0; /* Keep it behind the text */
 }
 
 
@@ -90,16 +118,7 @@ nav .logo img {
     margin-right:1.5%;
 }
 
-.meraki-logo-right {
-    position: absolute; 
-    top: 80%; /* Center vertically */
-    right: 0.1%; /* Position the logo on the left */
-    transform: translateY(-50%); /* Only center vertically */
-    opacity: 0.1 !important; 
-    width: 120px; /* Adjust the width of the logo */
-    height: auto; /* Let the height adjust automatically */
-    z-index: 0; /* Keep it behind the text */
-}
+
 
 .book-now {
     margin-top: 20px;
@@ -201,36 +220,165 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 .hamburger-menu {
-    display: none;
+    display: flex;
     position: absolute;
     top: 20px;
     right: 20px;
     z-index: 1001;
     cursor: pointer;
+    background-color: white;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 25px;
+    width: 50px; /* Slightly larger to match the visual style */
+    height: 50px; /* Make it a square shape */
+    border: 2px solid #A7D5A2; /* Green solid border */
+    border-radius: 4px; /* Rounded corners similar to the image */
+    box-sizing: border-box;
+    padding: 5px; /* Add some padding inside the border */
+    opacity: 0.9;
 }
 
 .hamburger-menu span {
     display: block;
     width: 100%;
-    height: 3px;
-    background-color: #4b4747;
-    border-radius: 2px solid #f5f1f1 !important;
+    height: 3px; /* Adjust the line thickness */
+    background-color: #4b4747; /* Line color */
+    opacity: 0.8;
+    border-radius: 2px; /* Slightly round the lines */
+}
+
+.top-bar, .top-bar-book-now, .top-bar-nav-text, .hamburger-menu {
+    display: none;
+}
+
+.close-menu {
+    display: flex;
+    position: absolute;
+    top: 6.5%;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Size of the square */
+    height: 50px;
+    border: 2px solid #A7D5A2; /* Green border */
+    background-color: white; /* White background */
+    border-radius: 4px; /* Slightly rounded corners */
+    box-sizing: border-box;
+}
+
+.close-icon {
+    font-size: 24px; /* Font size of the '×' */
+    color: #4b4747; /* Color of the close icon */
+}
+
+.hamburger-logo {
+    display: none;
 }
 
 
+.btn-book-now {
+    background-color: #ffffff;
+    color: #A7D5A2;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 2px solid #A7D5A2;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-book-now:hover {
+    background-color: #A7D5A2;
+    color: #ffffff;
+}
+
+
+
 /* where hamburger starts */
-@media (max-width: 750px) {
+@media (max-width: 680px) {
+    .hamburger-logo {
+        display: flex; /* Display as flex to manage positioning */
+        justify-content: center; /* Center the logo horizontally */
+        align-items: center; /* Center the logo vertically */
+        max-width: 40px; /* Confine the logo to a very small size */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0; /* Remove extra margins */
+        position: absolute; /* Position it within its container */
+        top: 10px; /* Adjust the top position to keep it visible */
+        left: 10px; /* Adjust the left position to keep it visible */
+        z-index: 1;
+        overflow: visible; /* Ensure the image itself isn't hidden */
+        box-sizing: border-box; /* Ensure padding and border are calculated inside the size */
+    }
+
+    .hamburger-logo img {
+        max-width: 700%; /* Confine the image within the parent container */
+        height: auto; /* Maintain the image aspect ratio */
+        margin-top: 100%;
+        margin-left: 50%;
+        display: block; /* Prevent any inline spacing issues */
+        object-fit: contain; /* Ensure the image scales correctly within the bounds */
+    }
+
+    .top-bar {
+        background-color: #231F20;
+        padding: 10px 20px;
+        width: 100%;
+        z-index: 1002; /* Ensure it stays above other elements */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
+    }
+
+    .top-bar-book-now {
+        display: block; /* Ensure this class is shown only within .top-bar */
+    }
+
+    .top-bar-nav-text {
+        display: block; /* Ensure this class is shown only within .top-bar */
+    }
+
+    .top-bar-book-now{
+        background-color: white !important; /* Set background color to white */
+        color: #A7D5A2 !important; /* Set text color to green */
+        padding: 1.5px 14px; /* Made wider */
+        font-size: 1rem;
+        /* border-radius: 50px; */
+        border: 2px solid #A7D5A2; /* Green solid border */
+        text-decoration: none;
+        font-weight: bold; /* Optional: make text bold */
+        width:200px !important;
+        transition: all 0.3s ease; /* Smooth transition on hover */
+        height: 50px !important;
+        display: flex !important;
+        justify-content: center;
+    align-items: center;
+    }
+    
+    .top-bar-book-now:hover {
+        background-color: #A7D5A2; /* Hover effect to change the background to green */
+        color: white !important; /* Change text color to white on hover */
+    }
+    
+    .hamburger-menu {
+        top: 60px; /* Adjust to ensure it is below the top-bar */
+        z-index: 1001;
+    }
+
+    header {
+        padding-top: 50px; /* Adjust padding to account for the fixed top-bar */
+    }
+
     nav {
-        display: none ; 
+        display: none;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        /* background-color: #fffbfbe5; */
         z-index: 1000;
         flex-direction: column;
         align-items: center;
@@ -244,7 +392,6 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
     .hamburger-menu {
         display: flex;
-
     }
 
     nav .logo img {
@@ -269,15 +416,14 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
         font-size: 1.5rem;
         color: #231F20;
         text-decoration: none;
-    
     }
-    
+
     .overlay-text {
         transform: translate(0, -50%);
-        text-align: center !important;
+        text-align: right !important;
         max-width: 100%; /* Allow the text more space on small screens */
         font-size: 1.8rem;
-        justify-content: center;
+        justify-content: right;
         left: 18%;
     }
 
@@ -288,12 +434,14 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
+
+
 @media (max-width: 480px) {
     .overlay-text {
         left: 18%;
         transform: translate(0, -50%);
-        text-align: center !important;
-        justify-content: center !important;
+        text-align: right !important;
+        justify-content: right !important;
         max-width: 90%; /* Allow the text more space on small screens */
         font-size: 1.8rem;
     }

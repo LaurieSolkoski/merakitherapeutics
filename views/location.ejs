@@ -6,10 +6,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style/location.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
     <title><%= title %></title>
 </head>
 <body>
+
+    <!-- Black Bar at the top -->
+    <div class="top-bar fixed-top d-flex justify-content-between align-items-center">
+        <div class="top-bar-book-now m-0">
+            <a href="https://merakitherapeutics.janeapp.com/" class="btn btn-book-now">Book Now</a>
+        </div>
+        <div class="top-bar-nav-text text-white">
+            <p class="mb-0">Or Call</p>
+            <p class="mb-0">604-383-0123</p>
+        </div>
+    </div>
+
     <header>
         <div class="fullscreen-gif">
         <nav>
@@ -43,19 +56,31 @@
         </nav>
 
 
-         <!-- Hamburger Icon -->
-         <div class="hamburger-menu" id="hamburger-menu">
+    <!-- Hamburger Icon -->
+    <div class="hamburger-yay">
+        <div class="hamburger-logo" id="hamburger-logo">
+            <a href="/"> <img src="/images/Meraki-Logo-Colour-RGB.png" alt="Meraki Therapeutics Logo"> </a>
+
+        </div>
+
+        <div class="hamburger-menu" id="hamburger-menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
+    </div>
 
-            <div class="overlay-text">
-                <p>Location + Hours</p>
-                <h1>Conveniently located in the Commons.</h1>
+<!-- Close Icon (Initially hidden) -->
+<div class="close-menu" id="close-menu" style="display: none;">
+    <span class="close-icon">×</span>
+</div>
 
-            </div>
-        </div>
+<div class="overlay-text">
+    <p>Treatments</p>
+    <h1>Discover a greater sense of wellness.</h1>
+
+</div>
+</div>
 
     </header>
 
@@ -138,6 +163,7 @@
         // Initialize EmailJS with the public key passed from the server
         emailjs.init('<%= emailjsPublicKey %>'); // Use the public key from the .env file
     </script>
+
     
     <script>
         // Form submission handler using EmailJS
@@ -163,13 +189,23 @@
 
 
     <script>
-        // Select the hamburger menu and nav
+        // Select the hamburger and close menu icons and nav
         const hamburger = document.getElementById('hamburger-menu');
+        const closeMenu = document.getElementById('close-menu');
         const nav = document.querySelector('nav');
-    
-        // Toggle the nav visibility when the hamburger icon is clicked
-        hamburger.addEventListener('click', function() {
+
+        // Toggle the nav visibility and icons when the hamburger icon is clicked
+        hamburger.addEventListener('click', function () {
             nav.classList.toggle('active');
+            hamburger.style.display = 'none'; // Hide hamburger icon
+            closeMenu.style.display = 'flex'; // Show close icon
+        });
+
+        // Toggle the nav visibility and icons when the close icon is clicked
+        closeMenu.addEventListener('click', function () {
+            nav.classList.toggle('active');
+            closeMenu.style.display = 'none'; // Hide close icon
+            hamburger.style.display = 'flex'; // Show hamburger icon
         });
     </script>
 

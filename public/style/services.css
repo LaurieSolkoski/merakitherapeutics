@@ -1,11 +1,28 @@
 body, html {
-    font-family: Arial, sans-serif;
+    font-family: 'Garamond', serif !important;
     margin: 0;
     padding: 0;
     background-color: rgba(255, 255, 255, 0.691) !important;
     overflow-y: auto;
     height: 100%;
 }
+
+/* Ensure Garamond is applied to all overlay text */
+.overlay-text,
+.overlay-text h1,
+.overlay-text h2,
+h4 {
+    font-family: 'Garamond', serif !important;
+}
+
+
+
+/* Ensure Garamond is applied to all overlay text */
+
+.overlay-text p, li, .nav-text, p{
+    font-family: 'Montserrat', sans-serif !important;
+}
+
 
 header {
     background-color: rgba(255, 255, 255, 0.691) !important;
@@ -200,7 +217,6 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 }
 
 
-
 .hamburger-menu {
     display: flex;
     position: absolute;
@@ -208,6 +224,7 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
     right: 20px;
     z-index: 1001;
     cursor: pointer;
+    background-color: white;
     flex-direction: column;
     justify-content: space-between;
     width: 50px; /* Slightly larger to match the visual style */
@@ -216,7 +233,7 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
     border-radius: 4px; /* Rounded corners similar to the image */
     box-sizing: border-box;
     padding: 5px; /* Add some padding inside the border */
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .hamburger-menu span {
@@ -408,10 +425,10 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
     .overlay-text {
         transform: translate(0, -50%);
-        text-align: center !important;
+        text-align: right !important;
         max-width: 100%; /* Allow the text more space on small screens */
         font-size: 1.8rem;
-        justify-content: center;
+        justify-content: right;
         left: 18%;
     }
 
@@ -427,8 +444,8 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
     .overlay-text {
         left: 18%;
         transform: translate(0, -50%);
-        text-align: center !important;
-        justify-content: center !important;
+        text-align: right !important;
+        justify-content: right !important;
         max-width: 90%; /* Allow the text more space on small screens */
         font-size: 1.8rem;
     }
