@@ -350,116 +350,107 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
-/* Soma Block Styles */
+
+
+
+/* SOMA */
+
+/* Soma section styles */
 .soma-block {
-    position: relative;
-    /* background: url('/images/soma-background.jpg') no-repeat center center/cover;  */
-    height: 100vh; /* Fullscreen height */
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding: 12%;
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* White text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
 }
 
-.soma-image {
+.soma-block::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/images/soma.jpg') no-repeat center center/cover;
-    opacity: 0.5; /* Semi-transparent background image */
-    z-index: 0; /* Ensure it's behind the content */
+    background: url('/images/soma.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
 }
 
-
-/* Soma content */
-.soma-content {
-    max-width: 500px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 10px;
-    text-align: left;
-    border-radius: 10px;
-    z-index: 1 !important; /* Ensure content is above the background */
-    position: relative;
-}
-
-/* Title and text */
-.soma-content h2 {
-    font-size: 3rem !important;
+.soma-block h2, .soma-block h4 {
+    font-weight: bold;
     margin-bottom: 30px;
-    color: #333;
+    color: #231F20; /* Ensures the text is readable */
 }
 
-.soma-content p {
-    font-size: 1.2rem !important;
-    color: #555;
-    margin-bottom: 40px;
-    line-height: 2.2 !important;
-    position: relative;
-    z-index: 1 !important; /* Ensures it is above the background */
-    opacity: 1 !important; /* Ensures the content is fully visible */
-
-
+.soma-block h4 {
+    font-size: 2rem;
+    font-weight: 300;
 }
 
-/* Learn More button */
+.soma-block p {
+    margin-top: 10px; /* Adjust as needed */
+    line-height: 3; /* Custom line height for better readability */
+}
+
+
+.soma-block ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    line-height: 3;
+}
+
+
+.soma-logo {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    width: 20%;
+    height: auto;
+    z-index: 0;
+}
+
+
 .btn-learn-more {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 1.2rem;
-    /* background-color: white; */
-    color: #A7D5A2;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid #A7D5A2 !important;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-    text-decoration: none !important;
-
+    position: relative;
+    z-index: 5; /* Ensure these elements are above everything */
+    margin: 0 0 10px;
+    text-align: left;
 }
+
+.btn-learn-more {
+    background-color: white !important; /* White background */
+    color: #A7D5A2 !important; /* Green text color */
+    border: 2px solid #A7D5A2 !important; /* Green solid border */
+    border-radius: 50px; /* Optional: rounded corners */
+    padding: 12px 0px !important; /* Padding for spacing inside button */
+    text-decoration: none; /* No underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    width: 70% !important;
+    align-self: flex-start;
+    margin-top: 10%;
+    margin-bottom: 20% !important;
+}
+
 
 .btn-learn-more:hover {
-    background-color: #7ac495; /* Darker green on hover */
+    background-color: #A7D5A2 !important; /* Green background on hover */
+    color: white !important; /* White text color on hover */
+    border: 2px solid white !important; /* White border on hover */
+}
+
+
+.treatment {
+    margin-top: 40% !important; /* Adjust this value to your desired top margin */
 }
 
 
 
-
-
-
-@media (max-width: 700px) {
-    .soma-block {
-        flex-direction: column; /* Stack content vertically */
-        padding: 50px !important; /* Reduce padding for smaller screens */
-        height: auto; /* Adjust height to fit content */
-    }
-
-    .soma-image {
-        width: 100%;
-        height: 50vh; /* Reduce image height for smaller screens */
-        opacity: 0.5; /* Maintain the semi-transparent background */
-    }
-
-    .soma-content {
-        max-width: 100%; /* Make content take full width */
-        padding: 15px; /* Adjust padding for better readability */
-        border-radius: 8px; /* Slightly reduce the border-radius */
-    }
-
-    .soma-content h2 {
-        font-size: 2rem !important; /* Reduce font size for headings */
-        margin-bottom: 20px;
-    }
-
-    .soma-content p {
-        font-size: 1rem !important; /* Adjust paragraph font size */
-        margin-bottom: 20px;
-        line-height: 1.6 !important; /* Adjust line height for better readability */
-    }
-
-    .btn-learn-more {
-        padding: 10px 20px; /* Adjust button padding */
-        font-size: 1rem; /* Reduce button font size */
+@media (max-width: 1000px) {
+    .massage-block {
+        min-width: 100%;
     }
 }
 
@@ -467,6 +458,99 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
+/* CROWN */
+
+/* Crown section styles */
+.crown-block {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* White text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.crown-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/pink_flower.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+.crown-block h2, .crown-block h4 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.crown-block h4 {
+    font-size: 2rem;
+    font-weight: 300;
+
+}
+
+.crown-block ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    line-height: 3;
+}
+
+/* Custom styles for the right section block */
+.right-section-crown {
+    text-align: left; /* Align all contents to the left */
+    padding: 50px !important; 
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 2;
+    position: relative;
+}
+
+.right-section-crown h4,
+.right-section-crown h5,
+.right-section-crown p,
+.right-section-crown ul {
+    margin-left: 0 !important; /* Remove any left margins */
+    text-align: left; /* Ensure all text is left-aligned */
+}
+
+.right-section-crown p {
+    line-height: 3 !important;
+}
+
+.right-section-crown .btn-book-now {
+    margin-left: 0 !important; /* Ensure button is aligned to the left */
+}
+
+.crown-block .treatment {
+    margin-top: 10% !important;
+}
+
+
+.crown-logo {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    width: 20%;
+    height: auto;
+    z-index: 0;
+}
+
+
+
+@media (max-width: 1000px) {
+    .massage-block {
+        min-width: 100%;
+    }
+}
 
 
 
@@ -477,7 +561,118 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
+/* ROOTS */
 
+/* Roots section styles */
+.roots-block {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* White text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.roots-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/foot.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+.roots-block h2, .roots-block h4 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.roots-block h4 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.roots-block p {
+    margin-top: 10px; /* Adjust as needed */
+    line-height: 3; /* Custom line height for better readability */
+}
+
+
+.roots-block ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    line-height: 3;
+}
+
+
+.roots-logo {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+    opacity: 0.2;
+    width: 20%;
+    height: auto;
+    z-index: 0;
+}
+
+
+.btn-learn-more {
+    position: relative;
+    z-index: 5; /* Ensure these elements are above everything */
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+.btn-learn-more {
+    background-color: white !important; /* White background */
+    color: #A7D5A2 !important; /* Green text color */
+    border: 2px solid #A7D5A2 !important; /* Green solid border */
+    border-radius: 50px; /* Optional: rounded corners */
+    padding: 12px 0px !important; /* Padding for spacing inside button */
+    text-decoration: none; /* No underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    width: 70% !important;
+    align-self: flex-start;
+    margin-top: 10%;
+    margin-bottom: 20% !important;
+}
+
+
+.btn-learn-more:hover {
+    background-color: #A7D5A2 !important; /* Green background on hover */
+    color: white !important; /* White text color on hover */
+    border: 2px solid white !important; /* White border on hover */
+}
+
+
+.treatment {
+    margin-top: 40% !important; /* Adjust this value to your desired top margin */
+}
+
+
+
+@media (max-width: 1000px) {
+    .massage-block {
+        min-width: 100%;
+    }
+}
+
+
+
+
+
+.meraki-block .btn-learn-more {
+    width: 30% !important; /* Adjust the width to your desired size */
+    display: inline-block; /* Ensures the width property is respected */
+    text-align: center; /* Center-aligns text within the button */
+    margin-bottom: -5% !important;
+    margin-top: 10% !important;
+}
 
 
 
