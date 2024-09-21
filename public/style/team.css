@@ -21,7 +21,7 @@ header {
 .nav-text {
     position:relative;
     text-align: center;
-    color: white !important;
+    color: #231F20;
     font-size: 1rem;
     margin-top: 10%;
     margin-bottom: 10%;
@@ -65,7 +65,7 @@ nav ul li {
 
 nav ul li a {
     display: inline-block;
-    color: #A7D5A2;
+    color: #231F20;
     text-decoration: none;
     font-size: 1.2rem;
     /* padding: 5px; */
@@ -121,34 +121,35 @@ h1, h2 {
 }
 
 
+
 .fullscreen-gif {
     position: relative;
     width: 100%;
     height: 110vh; /* Fullscreen height */
-    /* background: url('/images/optimized.gif') no-repeat center center/cover;  */
     display: flex;
     justify-content: flex-start; /* Align items on the left */
     align-items: center; /* Vertically center */
-
 }
 
-
-/* Base styles for the overlay text */
-.overlay-text {
+.fullscreen-gif::before {
+    content: "";
     position: absolute;
-    top: 50%;
-    right: 5%; /* Right-align the text */
-    transform: translateY(-50%);
-    text-align: right;
-    color: white;
-    font-size: 3rem;
-    max-width: 60%; /* Ensure the text doesn't overflow */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/two_heads.jpg') no-repeat center center/cover;
+    opacity: 0.4; /* Set the opacity of the background image */
+    z-index: 0; /* Ensure it is behind all content */
 }
 
-/* Subtitle styles */
-.overlay-text p {
-    font-size: 1.6rem;
+nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
+    position: relative;
+    z-index: 1; /* Ensure content stays above the background overlay */
+    opacity: 1; /* Keep all nav elements fully visible */
 }
+
+
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
