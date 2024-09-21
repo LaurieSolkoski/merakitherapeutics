@@ -339,8 +339,12 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
         border: 2px solid #A7D5A2; /* Green solid border */
         text-decoration: none;
         font-weight: bold; /* Optional: make text bold */
-        width:24% !important;
+        width:200px !important;
         transition: all 0.3s ease; /* Smooth transition on hover */
+        height: 50px !important;
+        display: flex !important;
+        justify-content: center;
+    align-items: center;
     }
     
     .top-bar-book-now:hover {
