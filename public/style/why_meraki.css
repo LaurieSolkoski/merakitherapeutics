@@ -5,6 +5,8 @@ body, html {
     background-color: rgba(255, 255, 255, 0.691) !important;
     overflow-y: auto;
     height: 100%;
+    overflow-x: hidden;
+
 }
 
 header {
