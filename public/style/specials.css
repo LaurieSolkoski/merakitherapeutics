@@ -555,6 +555,9 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
     font-style: italic; /* Makes the text italic */
     font-size: 1.2rem; /* Adjust font size as needed */
     color: #231F20; /* Adjust text color as needed */
+    max-width: 100%; /* Ensure it does not exceed the width of its column */
+    overflow: hidden; /* Prevents content overflow */
+    flex-wrap: wrap;
 }
 
 .separator {
