@@ -531,7 +531,161 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
+/* SERENA */
 
+.serena-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.serena-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/serena.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.serena-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.serena-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.serena-text h2, .serena-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.serena-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .jserena-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .serena-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .serena-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
+
+
+
+
+
+
+
+/* MARI */
+
+.mari-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.mari-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/essa.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.mari-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.mari-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.mari-text h2, .mari-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.mari-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .mari-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .mari-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .mari-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
 
 
 

@@ -73,12 +73,17 @@ app.get('/specials', (req, res) => {
   res.render('specials', { title: 'Specials and Events' });
 });
 
+
 app.get('/location', (req, res) => {
   res.render('location', { 
-      title: 'Location + Hours', 
-      apiKey: process.env.GOOGLE_MAPS_API_KEY 
+    title: 'Location + Hours', 
+    apiKey: process.env.GOOGLE_MAPS_API_KEY,
+    emailjsPublicKey: process.env.EMAILJS_PUBLIC_KEY, // Ensure this line is correct
+    emailjsServiceId: process.env.EMAILJS_SERVICE_ID, // Pass the Service ID if needed
+    emailjsTemplateId: process.env.EMAILJS_TEMPLATE_ID // Pass the Template ID if needed
   });
 });
+
 
 
 
