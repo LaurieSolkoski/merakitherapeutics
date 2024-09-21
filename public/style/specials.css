@@ -5,6 +5,7 @@ body, html {
     background-color: rgba(255, 255, 255, 0.691) !important;
     overflow-y: auto;
     height: 100%;
+    overflow-x: hidden;
 }
 
 header {
@@ -705,92 +706,6 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
 
 
 
-
-
-
-
-/* 3 BLOCKS */
-
-.massage-section {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    color: #231F20;
-}
-
-.massage-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/lavander.png'); /* Replace with your actual image path */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3; /* Set the opacity for the background image */
-    z-index: 0; /* Place the background behind the content */
-}
-
-.massage-block {
-    flex: 1;
-    min-width: 33.33%;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-    z-index: 2; /* Ensure content is above the background */
-    transition: background-color 0.3s ease;
-}
-
-.massage-block h4, .massage-block p, .btn-learn-more {
-    position: relative;
-    z-index: 5; /* Ensure these elements are above everything */
-    margin: 0 0 10px;
-    text-align: left;
-}
-
-
-.massage-block:hover {
-    background-color: rgba(167, 213, 162, 0.5); /* #A7D5A2 with 0.8 opacity */
-}
-
-.massage-block h4, .massage-block p {
-    margin: 0 0 10px;
-    text-align: left;
-}
-
-.massage-block h4 {
-    font-size: 2.5rem;
-    margin-top: 12%;
-}
-
-.massage-block p {
-    line-height: 3;
-}
-
-
-.btn-learn-more {
-    background-color: white !important; /* White background */
-    color: #A7D5A2 !important; /* Green text color */
-    border: 2px solid #A7D5A2 !important; /* Green solid border */
-    border-radius: 50px; /* Optional: rounded corners */
-    padding: 12px 0px !important; /* Padding for spacing inside button */
-    text-decoration: none; /* No underline */
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-    width: 70% !important;
-    align-self: flex-start;
-    margin-top: 10%;
-}
-
-
-.btn-learn-more:hover {
-    background-color: #A7D5A2 !important; /* Green background on hover */
-    color: white !important; /* White text color on hover */
-    border: 2px solid white !important; /* White border on hover */
-}
 
 
 
