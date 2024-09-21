@@ -629,7 +629,7 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/images/essa.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    background: url('/images/flower.jpg') center/cover no-repeat; /* Replace with your actual image path */
     opacity: 0.4; /* Set opacity for the background image */
     z-index: -1; /* Place behind the content */
 }
@@ -687,6 +687,575 @@ nav, .overlay-text, .hamburger-menu, .logo, .nav-text, .btn-book-now {
     }
 }
 
+
+
+
+
+/* JARREN */
+
+.jarren-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.jarren-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/jarren.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.jarren-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.jarren-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.jarren-text h2, .jarren-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.jarren-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .jarren-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .jarren-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .jarren-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* KEVIN */
+
+.kevin-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.kevin-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/kevin.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.kevin-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.kevin-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.kevin-text h2, .kevin-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.kevin-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .kevin-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .kevin-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .kevin-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* BRYAN */
+
+.bryan-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.bryan-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/bryan.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.bryan-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.bryan-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.bryan-text h2, .bryan-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.bryan-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .bryan-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .bryan-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .bryan-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
+
+
+
+
+
+
+
+/* ANIKA */
+
+.anika-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.anika-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/anika.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.anika-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.anika-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.anika-text h2, .anika-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.anika-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .anika-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .anika-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .anika-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
+
+
+
+
+
+
+
+
+/* SCARLETT */
+
+.scarlett-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.scarlett-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/scarlett.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.scarlett-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.scarlett-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.scarlett-text h2, .scarlett-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.scarlett-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .scarlett-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .scarlett-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .scarlett-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
+
+
+
+
+
+
+/* PELE */
+
+.pele-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.pele-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/pele.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.pele-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.pele-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.pele-text h2, .pele-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.pele-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .pele-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .pele-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .pele-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
+
+
+
+
+
+
+
+/* CAREERS */
+
+.careers-section {
+    position: relative; /* Position relative for correct layout of content */
+    padding: 40px 20px;
+    color: #231F20; /* Text color */
+    z-index: 1; /* Ensure content is above the background */
+    overflow: hidden; /* Ensure the pseudo-element stays within bounds */
+}
+
+.careers-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/meditation.jpg') center/cover no-repeat; /* Replace with your actual image path */
+    opacity: 0.4; /* Set opacity for the background image */
+    z-index: -1; /* Place behind the content */
+}
+
+/* Glassmorphism Backdrop for Text Section */
+.careers-text {
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6); /* White with 60% opacity */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    z-index: 2; /* Ensure the section content stays above the background */
+}
+
+.careers-text h4.owner-title {
+    color: #FF6347; /* Adjust color to match desired style */
+}
+
+.careers-text h2, .careers-text h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #231F20; /* Ensures the text is readable */
+}
+
+.careers-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .careers-section {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .careers-section::before {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Set height as needed */
+        opacity: 1; /* Make the image fully visible */
+        z-index: 0; /* Reset z-index to ensure it appears above everything */
+        order: -1; /* Make the background image appear above */
+    }
+
+    .careers-text {
+        width: 100%;
+        padding: 20px; /* Ensure text section stays centered */
+        text-align: left;
+        z-index: 2; /* Ensure text appears over the image */
+        margin-top: 5% !important;
+    }
+}
 
 
 
