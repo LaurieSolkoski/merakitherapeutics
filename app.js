@@ -69,6 +69,10 @@ app.get('/faq', (req, res) => {
     res.render('faq', { title: 'FAQ' });
 });
 
+app.get('/specials', (req, res) => {
+  res.render('specials', { title: 'Specials and Events' });
+});
+
 app.get('/location', (req, res) => {
   res.render('location', { 
       title: 'Location + Hours', 
